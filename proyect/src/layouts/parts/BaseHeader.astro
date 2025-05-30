@@ -1,5 +1,4 @@
 ---
-import { SITE_TITLE } from "../../ consts";
 import logo from "../../assets/logo.png";
 import "../../styles/styles.css";
 ---
@@ -9,7 +8,7 @@ import "../../styles/styles.css";
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <link rel="icon" type="image/png" href={logo.src} />
 <link rel="sitemap" href="/sitemap-index.xml" />
-<link rel="alternate" type="application/rss+xml" title={SITE_TITLE} />
+<link rel="alternate" type="application/rss+xml" title={'Heclipse Salud'} />
 <meta name="generator" content={Astro.generator} />
 
 <!-- Fonts -->
@@ -53,6 +52,7 @@ import "../../styles/styles.css";
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
   document.addEventListener('astro:page-load', () => {
+    // @ts-ignore
     AOS.init({
       duration: 800,
       once: true,
