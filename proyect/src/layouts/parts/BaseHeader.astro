@@ -8,7 +8,7 @@ import "../../styles/styles.css";
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <link rel="icon" type="image/png" href={logo.src} />
 <link rel="sitemap" href="/sitemap-index.xml" />
-<link rel="alternate" type="application/rss+xml" title={'Heclipse Salud'} />
+<link rel="alternate" type="application/rss+xml" title={"Heclipse Salud"} />
 <meta name="generator" content={Astro.generator} />
 
 <!-- Fonts -->
@@ -26,7 +26,10 @@ import "../../styles/styles.css";
 />
 
 <!-- Boxicons -->
-<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet' />
+<link
+	href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+	rel="stylesheet"
+/>
 
 <!-- Animate.css -->
 <link
@@ -49,22 +52,12 @@ import "../../styles/styles.css";
 ></script>
 
 <!-- AOS Init -->
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-  document.addEventListener('astro:page-load', () => {
-    // @ts-ignore
-    AOS.init({
-      duration: 800,
-      once: true,
-      offset: 100,
-    });
-  });
-</script>
+<script is:inline src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Tu Empresa de Salud</title>
+	<title>Heclipse Salud</title>
 	<meta
 		name="description"
 		content="Soluciones tecnológicas para el sector salud"

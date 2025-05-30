@@ -12,7 +12,7 @@ const menuItems = [
 ---
 
 <nav
-	class="navbar is-white pb-4"
+	class="navbar is-white py-4"
 	role="navigation"
 	aria-label="main navigation">
 	<div class="container">
@@ -74,10 +74,6 @@ const menuItems = [
 </nav>
 
 <style>
-	.navbar {
-		padding-top: 2rem;
-	}
-
 	.navbar-item {
 		font-weight: 500;
 		transition: var(--transition-base);
@@ -183,6 +179,27 @@ const menuItems = [
 
 		.navbar-item {
 			text-align: center;
+		}
+
+		.button.is-primary {
+			position: static;
+			margin: 1rem auto;
+		}
+
+		.navbar-end {
+			display: flex;
+			justify-content: center;
+		}
+
+		.navbar-end .navbar-item {
+			justify-content: center;
+			padding: 0;
+		}
+
+		.navbar-end .buttons {
+			margin: 0;
+			justify-content: center;
+			width: 100%;
 		}
 	}
 </style>

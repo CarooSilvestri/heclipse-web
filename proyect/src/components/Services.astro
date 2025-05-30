@@ -1,312 +1,521 @@
 ---
 const services = [
-  {
-    name: "Gestión Médica y Clínica",
-    features: [
-  "Historia Clínica Electrónica (ambulatoria e internación)",
-  "Gestión de turnos presenciales y web con notificaciones",
-  "Módulo de quirófano, guardia y camas",
-  "Recetas, interconsultas e informes médicos integrados",
-  "Seguimiento de pacientes y administración de medicación",
-  "Integración con laboratorio, imágenes y farmacia"
-]
-,
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=2070"
-  },
-  {
-    name: "Administración y Finanzas",
-    features: [
-      "Facturación integral ",
-      "Integración con AFIP para factura electrónica",
-      "Remitos por servicio/médico y valorización automática",
-      "Gestión de deudores y convenios con OOSS",
-      "Módulo contable: balances, asientos, IVA, libro diario",
-      "Compras, costos, subdiarios, control de bancos y cheques",
-      "Múltiples empresas y cuentas corrientes",
-      "Exportación automática a SIAp y Excel"
-    ],
-    image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=1000"
-  },
-  {
-    name: "Recursos Humanos",
-    features: [
-      "Liquidación de sueldos, jornales y vacaciones",
-      "Convenios, conceptos y fórmulas personalizadas",
-      "Gestión de guardias y horarios",
-      "Calificaciones de desempeño y legajos",
-      "Órdenes de pago automáticas a médicos",
-      "Vinculación con contabilidad y cuentas corrientes",
-      "Documentación del personal y usuarios",
-      "Estadísticas y reportes de RR.HH."
-    ],
-    image: "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=1000"
-  },
-  {
-    name: "Farmacia y Laboratorio",
-    features: [
-      "Control de stock por sector (quirófano, ART, etc.)",
-      "Pedidos, alertas y gestión de medicamentos especiales",
-      "Vinculación con enfermería y farmacia interna",
-      "Protocolos de laboratorio y carga de resultados",
-      "Estadísticas por médico, OOSS y fechas",
-      "Integración con historia clínica y facturación",
-      "Medicación catastrófica y facturación simple",
-      "Soporte para diagnóstico por imágenes y Kairos"
-    ],
-    image: "https://images.unsplash.com/photo-1585435557343-3b092031a831?q=80&w=1000"
-  },
-  {
-    name: "Reportes y Estadísticas",
-    features: [
-      "Panel de estadísticas por servicio, médico, OOSS",
-      "Indicadores de ingresos, egresos y prácticas",
-      "Gráficos interactivos y comparativos",
-      "Reportes de facturación, contabilidad y RR.HH.",
-      "Estadísticas de uso por usuario o dispositivo",
-      "Informes para auditoría y control de gestión",
-      "Exportación en múltiples formatos",
-      "Automatización de informes regulatorios"
-    ],
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000"
-  },
-  {
-    name: "Tecnología y Plataforma",
-    features: [
-      "Acceso web multiplataforma (PC, tablet, smartphone)",
-      "Plataforma instalada local o en la nube (AWS)",
-      "Seguridad, encriptación y backups automáticos",
-      "Gestión de usuarios y roles personalizados",
-      "Auditoría de actividades y trazabilidad completa",
-      "Licencias gratuitas (Linux, PostgreSQL, Java)",
-      "Soporte técnico, actualizaciones y personalización",
-      "Integración con AFIP, Kairos, BioNexo y más"
-    ],
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1000"
-  }
+	{
+		name: "Gestión Médica y Clínica",
+		features: [
+			"Historia Clínica Electrónica (ambulatoria e internación)",
+			"Gestión de turnos presenciales y web con notificaciones",
+			"Módulo de quirófano, guardia y camas",
+			"Recetas, interconsultas e informes médicos integrados",
+			"Seguimiento de pacientes y administración de medicación",
+			"Integración con laboratorio, imágenes y farmacia",
+		],
+		image:
+			"https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=2070",
+	},
+	{
+		name: "Administración y Finanzas",
+		features: [
+			"Facturación integral ",
+			"Integración con AFIP para factura electrónica",
+			"Remitos por servicio/médico y valorización automática",
+			"Gestión de deudores y convenios con OOSS",
+			"Módulo contable: balances, asientos, IVA, libro diario",
+			"Compras, costos, subdiarios, control de bancos y cheques",
+			"Múltiples empresas y cuentas corrientes",
+			"Exportación automática a SIAp y Excel",
+		],
+		image:
+			"https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=1000",
+	},
+	{
+		name: "Recursos Humanos",
+		features: [
+			"Liquidación de sueldos, jornales y vacaciones",
+			"Convenios, conceptos y fórmulas personalizadas",
+			"Gestión de guardias y horarios",
+			"Calificaciones de desempeño y legajos",
+			"Órdenes de pago automáticas a médicos",
+			"Vinculación con contabilidad y cuentas corrientes",
+			"Documentación del personal y usuarios",
+			"Estadísticas y reportes de RR.HH.",
+		],
+		image:
+			"https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=1000",
+	},
+	{
+		name: "Farmacia y Laboratorio",
+		features: [
+			"Control de stock por sector (quirófano, ART, etc.)",
+			"Pedidos, alertas y gestión de medicamentos especiales",
+			"Vinculación con enfermería y farmacia interna",
+			"Protocolos de laboratorio y carga de resultados",
+			"Estadísticas por médico, OOSS y fechas",
+			"Integración con historia clínica y facturación",
+			"Medicación catastrófica y facturación simple",
+			"Soporte para diagnóstico por imágenes y Kairos",
+		],
+		image:
+			"https://images.unsplash.com/photo-1585435557343-3b092031a831?q=80&w=1000",
+	},
+	{
+		name: "Reportes y Estadísticas",
+		features: [
+			"Panel de estadísticas por servicio, médico, OOSS",
+			"Indicadores de ingresos, egresos y prácticas",
+			"Gráficos interactivos y comparativos",
+			"Reportes de facturación, contabilidad y RR.HH.",
+			"Estadísticas de uso por usuario o dispositivo",
+			"Informes para auditoría y control de gestión",
+			"Exportación en múltiples formatos",
+			"Automatización de informes regulatorios",
+		],
+		image:
+			"https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000",
+	},
+	{
+		name: "Tecnología y Plataforma",
+		features: [
+			"Acceso web multiplataforma (PC, tablet, smartphone)",
+			"Plataforma instalada local o en la nube (AWS)",
+			"Seguridad, encriptación y backups automáticos",
+			"Gestión de usuarios y roles personalizados",
+			"Auditoría de actividades y trazabilidad completa",
+			"Licencias gratuitas (Linux, PostgreSQL, Java)",
+			"Soporte técnico, actualizaciones y personalización",
+			"Integración con AFIP, Kairos, BioNexo y más",
+		],
+		image:
+			"https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1000",
+	},
 ];
-
 ---
 
-<section class="section" id="servicios">
-  <div class="container">
-    <h2 class="title is-2 has-text-primary mb-6">Nuestros servicios</h2>
-    
-    <div class="columns is-variable is-4">
-      <!-- Lista de servicios -->
-      <div class="column is-4">
-        <div class="content">
-          <ul class="service-list">
-            {services.map((service, index) => (
-              <li class="service-item mb-4" data-index={index}>
-                <button class="service-button">
-                  <span class="icon-text">
-                    <span class="icon has-text-primary">
-                      <i class="fas fa-check-circle"></i>
-                    </span>
-                    <span class="is-size-5 has-text-weight-medium">{service.name}</span>
-                  </span>
-                </button>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-      
-      <!-- Contenido dinámico -->
-      <div class="column is-8 ml-0">
-        <div class="service-content">
-          {services.map((service, index) => {
-            return (
-              <div class="service-details" id={`service-${index}`}>
-                <div class="columns is-variable is-5">
-                  <div class="column is-5">
-                    <figure class="image mb-4">
-                      <img src={service.image} alt={service.name} class="is-rounded has-shadow" />
-                    </figure>
-                  </div>
-                  <div class="column is-7">
-                    <div class="content feature-list">
-                      <h3 class="title is-4 has-text-primary mb-4">Incluye:</h3>
-                      <ul class="pl-0">
-                        {service.features.map((feature) => {
-                          return <li class="mb-3 is-size-6">{feature}</li>
-                        })}
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )
-          })}
-        </div>
-      </div>
-    </div>
-  </div>
+<section class="section py-6" id="servicios" data-aos="fade-up">
+	<div class="container my-6">
+		<h2 class="title is-2 has-text-primary mb-6">Nuestros servicios</h2>
+
+		<div class="columns is-variable is-4">
+			<!-- Lista de servicios -->
+			<div class="column is-4">
+				<div class="service-buttons">
+					{
+						services.map((service, index) => (
+							<button class="service-button" data-index={index}>
+								<span class="icon-text">
+									<span class="icon has-text-primary">
+										<i class="fas fa-check-circle" />
+									</span>
+									<span class="is-size-5 has-text-weight-medium">
+										{service.name}
+									</span>
+								</span>
+							</button>
+						))
+					}
+				</div>
+			</div>
+
+			<!-- Contenido dinámico -->
+			<div class="column is-8 ml-0">
+				<div class="service-content">
+					{
+						services.map((service, index) => {
+							return (
+								<div class="service-details" id={`service-${index}`}>
+									<div class="columns is-variable is-5">
+										<div class="column is-5">
+											<figure class="image mb-4">
+												<img
+													src={service.image}
+													alt={service.name}
+													class="is-rounded has-shadow"
+												/>
+											</figure>
+										</div>
+										<div class="column is-7">
+											<div class="content feature-list">
+												<h3 class="title is-4 has-text-primary mb-4">
+													Incluye:
+												</h3>
+												<ul class="pl-0">
+													{service.features.map((feature) => {
+														return <li class="mb-3 is-size-6">{feature}</li>;
+													})}
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							);
+						})
+					}
+				</div>
+			</div>
+		</div>
+	</div>
 </section>
 
 <style>
-  .service-list {
-    list-style: none !important;
-    margin-left: 0 !important;
-    position: relative;
-  }
+	.columns {
+		height: 100%;
+		display: flex;
+	}
 
-  .service-item {
-    position: relative;
-    padding-right: 2rem;
-  }
+	.column {
+		display: flex;
+		flex-direction: column;
+	}
 
-  .service-button {
-    background: var(--bg-white);
-    border: 1px solid #dbdbdb;
-    width: 100%;
-    text-align: left;
-    padding: 1rem;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-    position: relative;
-    z-index: 1;
-  }
+	.service-buttons {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
 
-  .service-button:hover {
-    border-color: var(--primary);
-    background-color: rgba(0, 209, 178, 0.05);
-    transform: translateX(5px);
-  }
+	.service-button {
+		background: var(--bg-white);
+		border: 1px solid #dbdbdb;
+		width: 100%;
+		text-align: left;
+		padding: 1rem;
+		cursor: pointer;
+		border-radius: 4px;
+		transition: all 0.3s ease;
+		position: relative;
+		z-index: 1;
+	}
 
-  .service-button.is-active {
-    background-color: var(--primary);
-    color: white;
-    border-color: var(--primary);
-    transform: translateX(5px);
-  }
+	.service-button:hover {
+		border-color: var(--primary);
+		background-color: rgba(0, 209, 178, 0.05);
+		transform: translateX(5px);
+	}
 
-  .service-button.is-active .icon {
-    color: white !important;
-  }
+	.service-button.is-active {
+		background-color: var(--primary);
+		color: white;
+		border-color: var(--primary);
+		transform: translateX(5px);
+	}
 
-  .feature-list ul {
-    list-style: none;
-    color: #4a4a4a;
-    margin-left: 0 !important;
-  }
+	.service-button.is-active .icon {
+		color: white !important;
+	}
 
-  .feature-list li {
-    position: relative;
-    padding-left: 1.5rem;
-  }
+	.service-content {
+		height: 100%;
+		display: flex;
+	}
 
-  .feature-list li::before {
-    content: '•';
-    position: absolute;
-    left: 0;
-    color: var(--primary);
-    font-weight: bold;
-  }
+	.service-details {
+		height: 100%;
+		display: none;
+		animation: fadeIn 0.3s ease;
+		padding: 1.5rem;
+		background: var(--bg-white);
+		border-radius: 0.5rem;
+		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+		border: 1px solid #e0e0e0;
+	}
 
-  .image {
-    position: relative;
-    overflow: hidden;
-  }
+	.service-details.is-active {
+		display: flex;
+		flex-direction: column;
+	}
 
-  .image img {
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    height: 350px;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-    width: 100%;
-  }
+	.service-details .columns {
+		flex: 1;
+	}
 
-  .image:hover img {
-    transform: scale(1.05);
-  }
+	.feature-list ul {
+		list-style: none;
+		color: #4a4a4a;
+		margin-left: 0 !important;
+	}
 
-  .icon-text {
-    align-items: center;
-    display: flex;
-  }
+	.feature-list li {
+		position: relative;
+		padding-left: 1.5rem;
+	}
 
-  .icon-text .icon {
-    margin-right: 0.5rem;
-  }
+	.feature-list li::before {
+		content: "•";
+		position: absolute;
+		left: 0;
+		color: var(--primary);
+	}
 
-  .service-content {
-    height: 100%;
-  }
+	.image {
+		position: relative;
+		overflow: hidden;
+	}
 
-  .service-details {
-    height: 100%;
-    display: none;
-    animation: fadeIn 0.3s ease;
-    padding: 1.5rem;
-    background: var(--bg-white);
-    border-radius: 0.5rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    border: 2px solid var(--primary);
-  }
+	.image img {
+		border-radius: 0.5rem;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		height: 400px;
+		object-fit: cover;
+		transition: transform 0.3s ease;
+		width: 100%;
+	}
 
-  .service-details.is-active {
-    display: block;
-  }
 
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+	.icon-text {
+		align-items: center;
+		display: flex;
+	}
 
-  @media screen and (max-width: 768px) {
-    .service-item::after,
-    .service-item::before {
-      display: none;
-    }
+	.icon-text .icon {
+		margin-right: 0.5rem;
+	}
 
-    .service-button:hover,
-    .service-button.is-active {
-      transform: none;
-    }
-  }
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+			transform: translateY(10px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
 
-  .box {
-    border: none;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    transition: box-shadow 0.3s ease;
-  }
+	@media screen and (max-width: 768px) {
+		.columns {
+			height: auto;
+			flex-direction: column;
+		}
+		
+		.service-details {
+			height: auto;
+			padding: 1rem;
+		}
 
-  .box:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
+		.service-details .columns {
+			flex-direction: column;
+		}
 
-  .has-shadow {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
+		.service-item::after,
+		.service-item::before {
+			display: none;
+		}
+
+		.service-button:hover,
+		.service-button.is-active {
+			transform: none;
+		}
+
+		.service-buttons {
+			margin-bottom: 2rem;
+		}
+
+		.service-button {
+			margin-bottom: 0.5rem;
+			padding: 0.75rem 1rem;
+		}
+
+		.service-button .is-size-5 {
+			font-size: 1rem !important;
+		}
+
+		.image img {
+			height: 200px;
+			margin-bottom: 1rem;
+		}
+
+		.feature-list ul {
+			margin-top: 1rem;
+		}
+
+		.feature-list li {
+			font-size: 0.9rem !important;
+			margin-bottom: 0.5rem !important;
+		}
+
+		.title.is-2 {
+			font-size: 1.75rem !important;
+			text-align: center;
+			margin-bottom: 1.5rem !important;
+		}
+
+		.title.is-4 {
+			font-size: 1.25rem !important;
+		}
+
+		.section {
+			padding: 2rem 1rem;
+		}
+
+		.service-buttons {
+			margin-bottom: 1rem;
+		}
+
+		.service-button {
+			margin-bottom: 0.25rem;
+			padding: 0.5rem;
+		}
+
+		.service-details {
+			height: auto;
+			padding: 1rem;
+		}
+
+		.service-details .columns {
+			gap: 0.75rem;
+		}
+
+		.content.feature-list {
+			padding: 0 0.5rem;
+		}
+
+		.feature-list ul {
+			padding-left: 0.5rem;
+		}
+
+		.feature-list li {
+			padding-left: 1.5rem;
+			margin-bottom: 0.5rem !important;
+		}
+
+		.feature-list li::before {
+			left: 0.25rem;
+		}
+
+		.image {
+			margin-bottom: 0 !important;
+		}
+
+		.image img {
+			height: 175px;
+			margin-bottom: 0.5rem;
+		}
+
+		.feature-list ul {
+			margin-top: 0.5rem;
+		}
+
+		.feature-list li {
+			margin-bottom: 0.25rem !important;
+			line-height: 1.4;
+		}
+
+		.mb-6 {
+			margin-bottom: 1rem !important;
+		}
+
+		.mb-4 {
+			margin-bottom: 0.75rem !important;
+		}
+
+		.mb-3 {
+			margin-bottom: 0.5rem !important;
+		}
+
+		.columns.is-variable {
+			--columnGap: 0.5rem !important;
+		}
+
+		.service-buttons {
+			margin-bottom: 0.75rem;
+			gap: 0.25rem;
+		}
+
+		.service-button {
+			margin-bottom: 0;
+			padding: 0.5rem;
+			border-radius: 3px;
+		}
+
+		.service-button .icon {
+			margin-right: 0.25rem;
+		}
+
+		.service-content {
+			margin-top: 0;
+		}
+
+		.service-details {
+			padding: 1rem;
+		}
+
+		.service-details .columns {
+			gap: 0.75rem;
+		}
+
+		.content.feature-list {
+			padding: 0 0.5rem;
+		}
+
+		.feature-list ul {
+			padding-left: 0.5rem;
+		}
+
+		.feature-list li {
+			padding-left: 1.5rem;
+			margin-bottom: 0.5rem !important;
+		}
+
+		.feature-list li::before {
+			left: 0.25rem;
+		}
+
+		.service-button {
+			padding: 0.75rem 1rem;
+		}
+
+		.column.is-4,
+		.column.is-8 {
+			padding: 0.25rem;
+		}
+
+		.ml-0 {
+			margin-left: 0 !important;
+		}
+	}
+
+	.box {
+		border: none;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+		transition: box-shadow 0.3s ease;
+	}
+
+	.box:hover {
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	}
+
+	.has-shadow {
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	}
+
+	.section {
+		padding: 6rem 1.5rem;
+		margin: 3rem 0;
+	}
 </style>
 
 <script>
-  // Inicializar mostrando el primer servicio
-  document.querySelector('.service-button')?.classList.add('is-active');
-  document.querySelector('.service-details')?.classList.add('is-active');
+	// Inicializar mostrando el primer servicio
+	document.querySelector(".service-button")?.classList.add("is-active");
+	document.querySelector(".service-details")?.classList.add("is-active");
 
-  // Agregar interactividad a los botones
-  const serviceButtons = document.querySelectorAll('.service-button');
-  serviceButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      // Remover clase activa de todos los botones y contenidos
-      serviceButtons.forEach(btn => btn.classList.remove('is-active'));
-      document.querySelectorAll('.service-details').forEach(content => content.classList.remove('is-active'));
+	// Agregar interactividad a los botones
+	const serviceButtons = document.querySelectorAll(".service-button");
+	serviceButtons.forEach((button) => {
+		button.addEventListener("click", () => {
+			// Remover clase activa de todos los botones y contenidos
+			serviceButtons.forEach((btn) => btn.classList.remove("is-active"));
+			document
+				.querySelectorAll(".service-details")
+				.forEach((content) => content.classList.remove("is-active"));
 
-      // Agregar clase activa al botón clickeado y su contenido correspondiente
-      button.classList.add('is-active');
-      const serviceItem = button.closest('.service-item') as HTMLElement;
-      const serviceIndex = serviceItem?.getAttribute('data-index');
-      document.querySelector(`#service-${serviceIndex}`)?.classList.add('is-active');
-    });
-  });
+			// Agregar clase activa al botón clickeado y su contenido correspondiente
+			button.classList.add("is-active");
+			const serviceIndex = button.getAttribute("data-index");
+			document
+				.querySelector(`#service-${serviceIndex}`)
+				?.classList.add("is-active");
+		});
+	});
 </script>

@@ -1,14 +1,11 @@
----
-import { Image } from "astro:assets";
----
-
 <section class="hero is-fullheight-with-navbar">
 	<div class="hero-body">
 		<div class="overlay"></div>
 		<div class="hero-content">
 			<h1 class="title is-1">Prospera con Soluciones de Salud Excepcionales</h1>
 			<p class="subtitle is-4">
-				Confía en nosotros para ser tus aliados en alcanzar la salud y el bienestar que mereces
+				Confía en nosotros para ser tus aliados en alcanzar la salud y el
+				bienestar que mereces
 			</p>
 		</div>
 	</div>
@@ -21,7 +18,7 @@ import { Image } from "astro:assets";
 		min-height: 100vh;
 		border-radius: 8px;
 	}
-	
+
 	.hero-body {
 		position: relative;
 		z-index: 1;
@@ -39,11 +36,12 @@ import { Image } from "astro:assets";
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background: linear-gradient(to top, 
-			rgba(0,0,0,0.7) 0%,
-			rgba(0,0,0,0.5) 40%,
-			rgba(0,0,0,0.2) 70%,
-			rgba(0,0,0,0) 100%
+		background: linear-gradient(
+			to top,
+			rgba(0, 0, 0, 0.7) 0%,
+			rgba(0, 0, 0, 0.5) 40%,
+			rgba(0, 0, 0, 0.2) 70%,
+			rgba(0, 0, 0, 0) 100%
 		);
 	}
 
@@ -84,10 +82,6 @@ import { Image } from "astro:assets";
 	}
 
 	@media screen and (max-width: 768px) {
-		.hero {
-			margin: 1rem;
-		}
-
 		.hero-content {
 			padding: 1.5rem;
 		}

@@ -1,228 +1,276 @@
 ---
 const benefits = [
-  {
-    icon: "bx bx-laptop",
-    title: "Somos especialistas en software para salud",
-    description: "Experiencia comprobada en el sector"
-  },
-  {
-    icon: "bx bx-cog",
-    title: "Automatizamos los procesos",
-    description: "Mejora la eficiencia operativa"
-  },
-  {
-    icon: "bx bx-cloud",
-    title: "Acceso desde cualquier lugar",
-    description: "Disponibilidad 24/7"
-  },
-  {
-    icon: "bx bx-extension",
-    title: "Solución integral",
-    description: "Todos los módulos que necesitas"
-  },
-  {
-    icon: "bx bx-rocket",
-    title: "Implementación rápida",
-    description: "Capacitación incluida en el proceso"
-  },
-  {
-    icon: "bx bx-chip",
-    title: "Tecnología de punta",
-    description: "Desarrollado con las últimas tecnologías"
-  }
+	{
+		icon: "bx bx-laptop",
+		title: "Somos especialistas en software para salud",
+		description: "Experiencia comprobada en el sector",
+	},
+	{
+		icon: "bx bx-cog",
+		title: "Automatizamos los procesos",
+		description: "Mejora la eficiencia operativa",
+	},
+	{
+		icon: "bx bx-cloud",
+		title: "Acceso desde cualquier lugar",
+		description: "Disponibilidad 24/7",
+	},
+	{
+		icon: "bx bx-extension",
+		title: "Solución integral",
+		description: "Todos los módulos que necesitas",
+	},
+	{
+		icon: "bx bx-rocket",
+		title: "Implementación rápida",
+		description: "Capacitación incluida en el proceso",
+	},
+	{
+		icon: "bx bx-chip",
+		title: "Tecnología de punta",
+		description: "Desarrollado con las últimas tecnologías",
+	},
 ];
 ---
 
-<section class="section has-background-neutral-light py-6" id="por-que-elegirnos">
-  <div class="container">
-    <div class="columns is-vcentered">
-      <!-- Columna de texto -->
-      <div class="column is-5 content-column">
-        <h2 class="title is-3 has-text-dark mb-4">
-          ¿Por qué <span class="has-text-secondary">elegirnos</span>?
-        </h2>
-        <div class="content">
-          <p class="subtitle is-5 mb-4 has-text-regular">
-            Nos destacamos por brindar soluciones tecnológicas innovadoras y eficientes para el sector salud.
-          </p>
-          <p class="is-size-6 mb-6 has-text-light">
-            Con años de experiencia en el mercado, entendemos las necesidades específicas de las instituciones médicas y desarrollamos soluciones a medida.
-          </p>
-          <a href="#contacto" class="button is-primary is-rounded">
-            <span class="button-text">Contactar ahora</span>
-            <span class="icon">
-              <i class="bx bx-right-arrow-alt"></i>
-            </span>
-          </a>
-        </div>
-      </div>
+<section
+	class="section has-background-neutral-light py-6"
+	id="por-que-elegirnos"
+	data-aos="fade-up">
+	<div class="container">
+		<div class="columns is-vcentered">
+			<!-- Columna de texto -->
+			<div class="column is-5 content-column">
+				<h2 class="title is-3 has-text-dark mb-4">
+					¿Por qué <span class="has-text-secondary">elegirnos</span>?
+				</h2>
+				<div class="content">
+					<p class="subtitle is-5 mb-4 has-text-regular">
+						Nos destacamos por brindar soluciones tecnológicas innovadoras y
+						eficientes para el sector salud.
+					</p>
+					<p class="is-size-6 mb-6 has-text-light">
+						Con años de experiencia en el mercado, entendemos las necesidades
+						específicas de las instituciones médicas y desarrollamos soluciones
+						a medida.
+					</p>
+					<a href="#contacto" class="button is-primary is-rounded">
+						<span class="button-text">Contactar ahora</span>
+						<span class="icon">
+							<i class="bx bx-right-arrow-alt"></i>
+						</span>
+					</a>
+				</div>
+			</div>
 
-      <!-- Columna de cards -->
-      <div class="column is-7">
-        <div class="benefits-grid">
-          {
-            benefits.map((benefit, index) => (
-              <div class="benefit-card animate__animated animate__fadeIn">
-                <div class="card-content">
-                  <span class="icon mb-3 has-text-secondary">
-                    <i class={benefit.icon}></i>
-                  </span>
-                  <h3 class="title is-6 mb-2 has-text-weight-bold has-text-dark">{benefit.title}</h3>
-                  <p class="is-size-6 has-text-light">
-                    {benefit.description}
-                  </p>
-                </div>
-              </div>
-            ))
-          }
-        </div>
-      </div>
-    </div>
-  </div>
+			<!-- Columna de cards -->
+			<div class="column is-7">
+				<div class="benefits-grid">
+					{
+						benefits.map((benefit, index) => (
+							<div class="benefit-card animate__animated animate__fadeIn">
+								<div class="card-content">
+									<span class="icon mb-3 has-text-secondary">
+										<i class={benefit.icon} />
+									</span>
+									<h3 class="title is-6 mb-2 has-text-weight-bold has-text-dark">
+										{benefit.title}
+									</h3>
+									<p class="is-size-6 has-text-light">{benefit.description}</p>
+								</div>
+							</div>
+						))
+					}
+				</div>
+			</div>
+		</div>
+	</div>
 </section>
 
 <style>
-  .content-column {
-    padding-right: 2rem;
-  }
+	#por-que-elegirnos {
+		border-radius: 8px;
+	}
+	.content-column {
+		padding-right: 2rem;
+	}
 
-  .benefits-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-    padding: 0.5rem;
-  }
+	.benefits-grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1.5rem;
+		padding: 0.5rem;
+	}
 
-  .benefit-card {
-    background: var(--bg-white);
-    border-radius: var(--border-radius-md);
-    padding: 1.25rem;
-    transition: var(--transition-base);
-    border: 1px solid var(--border-light);
-    position: relative;
-    overflow: hidden;
-  }
+	.benefit-card {
+		background: var(--bg-white);
+		border-radius: var(--border-radius-md);
+		padding: 1.25rem;
+		transition: var(--transition-base);
+		border: 1px solid var(--border-light);
+		position: relative;
+		overflow: hidden;
+	}
 
-  .benefit-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: var(--primary);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.3s ease;
-  }
+	.benefit-card::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 3px;
+		background: var(--primary);
+		transform: scaleX(0);
+		transform-origin: left;
+		transition: transform 0.3s ease;
+	}
 
-  .benefit-card:hover {
-    transform: translateY(-3px);
-    border-color: var(--border-light);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-  }
+	.benefit-card:hover {
+		transform: translateY(-3px);
+		border-color: var(--border-light);
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+	}
 
-  .benefit-card:hover::before {
-    transform: scaleX(1);
-  }
+	.benefit-card:hover::before {
+		transform: scaleX(1);
+	}
 
-  .icon {
-    font-size: 1.5rem;
-    height: 1.5rem;
-    width: 1.5rem;
-    display: block;
-  }
+	.icon {
+		font-size: 1.5rem;
+		height: 1.5rem;
+		width: 1.5rem;
+		display: block;
+	}
 
-  .has-text-regular {
-    color: var(--text-regular) !important;
-  }
+	.has-text-regular {
+		color: var(--text-regular) !important;
+	}
 
-  .has-text-light {
-    color: var(--text-light) !important;
-  }
+	.has-text-light {
+		color: var(--text-light) !important;
+	}
 
-  .has-text-secondary {
-    color: var(--secondary) !important;
-  }
+	.has-text-secondary {
+		color: var(--secondary) !important;
+	}
 
-  .button.is-primary {
-    background-color: var(--primary);
-    color: white;
-    transition: all 0.3s ease;
-    font-weight: 500;
-    width: 140px;
-    position: relative;
-    overflow: hidden;
-    padding: 0.75em 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+	.button.is-primary {
+		background-color: var(--primary);
+		color: white;
+		transition: all 0.3s ease;
+		font-weight: 500;
+		width: 140px;
+		position: relative;
+		overflow: hidden;
+		padding: 0.75em 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 
-  .button.is-primary:hover {
-    background-color: var(--primary-dark);
-    width: 190px;
-    box-shadow: 0 4px 12px rgba(0, 150, 136, 0.2);
-  }
+	.button.is-primary:hover {
+		background-color: var(--primary-dark);
+		width: 190px;
+		box-shadow: 0 4px 12px rgba(0, 150, 136, 0.2);
+	}
 
-  .button .button-text {
-    position: relative;
-    z-index: 2;
-    font-size: 0.95rem;
-    display: block;
-    text-align: center;
-    transform: translateX(0);
-    transition: transform 0.3s ease;
-  }
+	.button .button-text {
+		position: relative;
+		z-index: 2;
+		font-size: 0.95rem;
+		display: block;
+		text-align: center;
+		transform: translateX(0);
+		transition: transform 0.3s ease;
+	}
 
-  .button:hover .button-text {
-    transform: translateX(-10px);
-  }
+	.button:hover .button-text {
+		transform: translateX(-10px);
+	}
 
-  .button .icon {
-    position: absolute;
-    right: 1.5rem;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1.2rem;
-    height: 1.5rem;
-    width: 1.5rem;
-    opacity: 0;
-    transition: all 0.3s ease;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+	.button .icon {
+		position: absolute;
+		right: 1.5rem;
+		top: 50%;
+		transform: translateY(-50%);
+		font-size: 1.2rem;
+		height: 1.5rem;
+		width: 1.5rem;
+		opacity: 0;
+		transition: all 0.3s ease;
+		z-index: 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 
-  .button:hover .icon {
-    opacity: 1;
-  }
+	.button:hover .icon {
+		opacity: 1;
+	}
 
-  .has-background-neutral-light {
-    background-color: var(--neutral-light) !important;
-  }
+	.has-background-neutral-light {
+		background-color: var(--neutral-light) !important;
+	}
 
-  @media screen and (max-width: 1215px) {
-    .benefits-grid {
-      gap: 1rem;
-    }
-  }
+	@media screen and (max-width: 1215px) {
+		.benefits-grid {
+			gap: 1rem;
+		}
+	}
 
-  @media screen and (max-width: 768px) {
-    .content-column {
-      padding-right: 1rem;
-      padding-bottom: 2rem;
-      text-align: center;
-    }
+	@media screen and (max-width: 768px) {
+		.content-column {
+			padding-right: 1rem;
+			padding-bottom: 0;
+			text-align: center;
+		}
 
-    .benefits-grid {
-      grid-template-columns: 1fr;
-      gap: 1rem;
-    }
+		.content-column .title {
+			margin-bottom: 1rem !important;
+			font-size: 1.5rem !important;
+		}
 
-    .benefit-card {
-      padding: 1.25rem;
-    }
-  }
-</style> 
+		.content-column .subtitle {
+			margin-bottom: 1rem !important;
+		}
+
+		.content-column p {
+			margin-bottom: 1rem !important;
+		}
+
+		.benefits-grid {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 0.5rem;
+			padding: 0;
+		}
+
+		.benefit-card {
+			padding: 0.75rem;
+		}
+
+		.benefit-card .card-content {
+			padding: 0;
+		}
+
+		.benefit-card .icon {
+			margin-bottom: 0.5rem;
+			font-size: 1.25rem;
+		}
+
+		.benefit-card .title.is-6 {
+			margin-bottom: 0.25rem !important;
+			font-size: 0.85rem !important;
+			line-height: 1.2;
+		}
+
+		.benefit-card .is-size-6 {
+			font-size: 0.75rem !important;
+			line-height: 1.3;
+			margin-bottom: 0;
+		}
+
+		.button.is-primary {
+			display: none;
+		}
+	}
+</style>

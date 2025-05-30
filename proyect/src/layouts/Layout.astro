@@ -2,31 +2,24 @@
 import BaseHeader from "./parts/BaseHeader.astro";
 import Navbar from "./parts/Navbar.astro";
 import Footer from "./parts/Footer.astro";
-
 ---
 
 <!doctype html>
 <html>
 	<BaseHeader />
 	<body class="has-background-white">
-		<div class="px-2 px-sm-4">
+		<div class="container is-fluid px-4 px-5-desktop">
 			<Navbar />
 			<slot />
 		</div>
 		<Footer />
+		<script is:inline>
+			AOS.init({
+				duration: 800,
+				once: true,
+			});
+		</script>
 	</body>
 </html>
 
-<style>
-	.px-2 {
-		padding-left: 0.5rem;
-		padding-right: 0.5rem;
-	}
-
-	@media screen and (min-width: 768px) {
-		.px-sm-4 {
-			padding-left: 1.5rem;
-			padding-right: 1.5rem;
-		}
-	}
-</style>
+<style></style>
