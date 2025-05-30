@@ -1,4 +1,94 @@
-# Astro Starter Kit: Basics
+# Heclipse - Sitio Web Institucional
+
+![Heclipse Logo](src/assets/logo_completo.png)
+
+## 🌟 Sobre el Proyecto
+
+Sitio web institucional de Heclipse, desarrollado con tecnologías modernas y enfocado en presentar nuestra empresa y servicios de manera profesional y atractiva. El sitio está diseñado para proporcionar una experiencia de usuario óptima y transmitir nuestra propuesta de valor en el sector salud.
+
+## 📋 Secciones Principales
+
+- **Inicio**: Hero section con mensaje principal y llamado a la acción
+- **Nosotros**: Información sobre la empresa y nuestros valores
+- **¿Por qué elegirnos?**: Beneficios y características distintivas
+- **Servicios**: Presentación detallada de nuestras soluciones
+- **Contacto**: Formulario y datos de contacto
+
+## 🎨 Características de Diseño
+
+- Paleta de colores institucional (verde y dorado)
+- Diseño moderno y minimalista
+- Animaciones sutiles para mejorar la experiencia
+- Totalmente responsive
+- Optimizado para velocidad de carga
+
+## 🚀 Tecnologías Utilizadas
+
+- **[Astro](https://astro.build/)**: Framework web para mejor rendimiento
+- **[Bulma](https://bulma.io/)**: Framework CSS para diseño responsive
+- **[Font Awesome](https://fontawesome.com/)**: Iconografía
+- **[Boxicons](https://boxicons.com/)**: Set de iconos adicionales
+- **[Animate.css](https://animate.style/)**: Animaciones fluidas
+
+## 💻 Desarrollo Local
+
+1. **Clonar el repositorio**
+   ```bash
+   git clone https://github.com/tu-usuario/heclipse.git
+   cd heclipse
+   ```
+
+2. **Instalar dependencias**
+   ```bash
+   npm install
+   ```
+
+3. **Iniciar entorno de desarrollo**
+   ```bash
+   npm run dev
+   ```
+
+4. **Construir para producción**
+   ```bash
+   npm run build
+   ```
+
+## 📱 Responsive Design
+
+El sitio está optimizado para todas las pantallas:
+- Móviles (< 768px)
+- Tablets (768px - 1023px)
+- Desktop (> 1024px)
+
+## 🔧 Estructura del Proyecto
+
+```text
+/
+├── src/
+│   ├── assets/         # Imágenes y recursos
+│   ├── components/     # Componentes reutilizables
+│   ├── layouts/        # Plantillas base
+│   ├── pages/         # Páginas del sitio
+│   └── styles/        # Estilos globales
+└── public/            # Archivos estáticos
+```
+
+## 🎯 Objetivos del Sitio
+
+- Presentar la empresa de manera profesional
+- Destacar nuestras soluciones en el sector salud
+- Facilitar el contacto con potenciales clientes
+- Proporcionar una experiencia de usuario fluida
+- Optimizar el rendimiento y SEO
+
+## 📞 Contacto
+
+- **Email**: heclipse.software@gmail.com
+- **Teléfono**: +54 9 3886 82-8566
+
+---
+
+Desarrollado con 💚 por Heclipse
 
 ```sh
 npm create astro@latest -- --template basics
