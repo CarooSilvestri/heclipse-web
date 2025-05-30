@@ -1,22 +1,32 @@
+---
+import BaseHeader from "./parts/BaseHeader.astro";
+import Navbar from "./parts/Navbar.astro";
+import Footer from "./parts/Footer.astro";
+
+---
+
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
+<html>
+	<BaseHeader />
+	<body class="has-background-white">
+		<div class="px-2 px-sm-4">
+			<Navbar />
+			<slot />
+		</div>
+		<Footer />
 	</body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
+	.px-2 {
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+	}
+
+	@media screen and (min-width: 768px) {
+		.px-sm-4 {
+			padding-left: 1.5rem;
+			padding-right: 1.5rem;
+		}
 	}
 </style>

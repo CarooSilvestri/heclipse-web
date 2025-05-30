@@ -1,0 +1,231 @@
+---
+import { Image } from "astro:assets";
+import logo from "../../assets/logo.png";
+import logoCompleto from "../../assets/logo_completo.png";
+
+const menuItems = [
+	{ href: "#inicio", text: "Inicio" },
+	{ href: "#nosotros", text: "Nosotros" },
+	{ href: "#por-que-elegirnos", text: "¿Por qué elegirnos?" },
+	{ href: "#servicios", text: "Servicios" },
+];
+---
+
+<nav
+	class="navbar is-white pb-4"
+	role="navigation"
+	aria-label="main navigation">
+	<div class="container">
+		<div class="navbar-brand">
+			<a class="navbar-logo" href="/">
+				<Image
+					src={logoCompleto}
+					alt="Logo"
+					width={100}
+					height={150}
+					class="main-logo animate__animated animate__fadeIn"
+				/>
+				<Image
+					src={logo}
+					alt="Logo"
+					width={35}
+					height={35}
+					class="mobile-logo animate__animated animate__fadeIn"
+				/>
+			</a>
+
+			<a
+				role="button"
+				class="navbar-burger"
+				aria-label="menu"
+				aria-expanded="false"
+				data-target="navbarBasic">
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+			</a>
+		</div>
+
+		<div id="navbarBasic" class="navbar-menu animate__animated">
+			<div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+				{
+					menuItems.map((item) => (
+						<a class="navbar-item has-text-weight-medium px-4" href={item.href}>
+							{item.text}
+						</a>
+					))
+				}
+			</div>
+
+			<div class="navbar-end">
+				<div class="navbar-item">
+					<div class="buttons">
+						<a class="button is-primary is-rounded" href="#contacto">
+							<span class="button-text">Contacto</span>
+							<span class="icon">
+								<i class="bx bx-right-arrow-alt"></i>
+							</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>
+
+<style>
+	.navbar {
+		padding-top: 2rem;
+	}
+
+	.navbar-item {
+		font-weight: 500;
+		transition: var(--transition-base);
+		color: var(--text-regular);
+	}
+	.navbar-logo {
+		width: fit-content;
+	}
+
+	.navbar-item:hover {
+		color: var(--secondary) !important;
+		background-color: transparent !important;
+	}
+
+	.button.is-primary {
+		background-color: var(--primary);
+		color: white;
+		transition: all 0.3s ease;
+		font-weight: 500;
+		width: 120px;
+		position: absolute;
+		overflow: hidden;
+		padding: 0.75em 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		right: 0;
+	}
+
+	.button.is-primary:hover {
+		background-color: var(--primary-dark);
+		width: 160px;
+		box-shadow: 0 4px 12px rgba(0, 150, 136, 0.2);
+	}
+
+	.button .button-text {
+		position: relative;
+		z-index: 2;
+		font-size: 0.95rem;
+		display: block;
+		text-align: center;
+		transform: translateX(0);
+		transition: transform 0.3s ease;
+	}
+
+	.button:hover .button-text {
+		transform: translateX(-10px);
+	}
+
+	.button .icon {
+		position: absolute;
+		right: 1.5rem;
+		top: 50%;
+		transform: translateY(-50%);
+		font-size: 1.2rem;
+		height: 1.5rem;
+		width: 1.5rem;
+		opacity: 0;
+		transition: all 0.3s ease;
+		z-index: 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.button:hover .icon {
+		opacity: 1;
+	}
+
+	/* Logo handling */
+	.main-logo {
+		display: block;
+	}
+
+	.mobile-logo {
+		display: none;
+	}
+
+	@media screen and (max-width: 768px) {
+		.main-logo {
+			display: none;
+		}
+
+		.mobile-logo {
+			display: block;
+		}
+
+		.navbar {
+			padding: 1rem 0;
+		}
+	}
+
+	@media screen and (max-width: 1023px) {
+		.navbar-menu {
+			background-color: var(--bg-white);
+			backdrop-filter: blur(10px);
+		}
+
+		.navbar-menu.is-active {
+			animation: animate__fadeIn;
+			animation-duration: 0.3s;
+		}
+
+		.navbar-item {
+			text-align: center;
+		}
+	}
+</style>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const burger = document.querySelector('.navbar-burger');
+		const menu = document.querySelector('.navbar-menu');
+		const navLinks = document.querySelectorAll('.navbar-item, .button');
+		
+		// Burger menu toggle
+		burger?.addEventListener('click', () => {
+			burger.classList.toggle('is-active');
+			menu?.classList.toggle('is-active');
+			
+			if (menu?.classList.contains('is-active')) {
+				menu.classList.add('animate__fadeIn');
+			} else {
+				menu?.classList.remove('animate__fadeIn');
+			}
+		});
+
+		// Smooth scroll and mobile menu handling
+		navLinks.forEach(link => {
+			link.addEventListener('click', (e) => {
+				const href = link.getAttribute('href');
+				if (href?.startsWith('#')) {
+					e.preventDefault();
+					const target = document.querySelector(href);
+					if (target) {
+						// Cerrar menú móvil
+						burger?.classList.remove('is-active');
+						menu?.classList.remove('is-active');
+						menu?.classList.remove('animate__fadeIn');
+
+						// Scroll suave
+						target.scrollIntoView({ 
+							behavior: 'smooth',
+							block: 'start'
+						});
+					}
+				}
+			});
+		});
+	});
+</script>
