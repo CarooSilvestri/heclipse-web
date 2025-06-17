@@ -1,0 +1,225 @@
+---
+// src/components/modulos/ModulosHero.astro
+---
+
+<section class="hero is-medium has-background-white">
+	<div class="hero-body py-5">
+		<div class="container">
+			<div class="columns is-vcentered">
+				<div class="column is-6">
+					<div class="content">
+						<h1 class="title is-1 has-text-dark mb-4">
+							Ecosistema Digital Hospitalario
+						</h1>
+						<h2 class="subtitle is-3 has-text-primary mb-5">
+							NUESTRA PROPUESTA INTEGRAL
+						</h2>
+						<p class="subtitle is-5 has-text-grey-dark mb-6">
+							Automatizamos e integramos procesos por medio de un innovador ecosistema de soluciones en la nube, para que usted maximice la productividad y seguridad de su organización, y sus pacientes tengan la mejor experiencia.
+						</p>
+						
+
+
+
+					</div>
+				</div>
+				
+				<div class="column is-6">
+					<div class="ecosystem-visual">
+						<div class="ecosystem-center">
+							<div class="center-circle">
+								<h3 class="has-text-white has-text-weight-bold">Heclipse</h3>
+								<p class="has-text-white is-size-7">Smart HIS</p>
+							</div>
+						</div>
+						
+						<div class="ecosystem-items">
+							<div class="eco-item eco-item-1">
+								<i class="fas fa-cogs"></i>
+								<span>Implementación<br>y migración</span>
+							</div>
+							<div class="eco-item eco-item-2">
+								<i class="fas fa-graduation-cap"></i>
+								<span>Entrenamiento<br>del personal</span>
+							</div>
+							<div class="eco-item eco-item-3">
+								<i class="fas fa-headset"></i>
+								<span>Soporte técnico<br>especializado</span>
+							</div>
+							<div class="eco-item eco-item-4">
+								<i class="fas fa-puzzle-piece"></i>
+								<span>Funcionalidades<br>personalizadas</span>
+							</div>
+							<div class="eco-item eco-item-5">
+								<i class="fas fa-th-large"></i>
+								<span>Los Módulos<br>que necesites</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+.hero-body {
+	padding: 4rem 1.5rem 3rem 1.5rem;
+}
+
+
+
+.ecosystem-visual {
+	position: relative;
+	height: 400px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.ecosystem-center {
+	position: absolute;
+	z-index: 2;
+}
+
+.center-circle {
+	width: 140px;
+	height: 140px;
+	border-radius: 50%;
+	background: linear-gradient(45deg, #00d4aa, #00b4d8);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 10px 30px rgba(0, 212, 170, 0.3);
+	border: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+.center-circle h3 {
+	font-size: 1.2rem;
+	margin-bottom: 0.2rem;
+}
+
+.center-circle p {
+	font-size: 0.9rem;
+}
+
+.ecosystem-items {
+	position: relative;
+	width: 400px;
+	height: 400px;
+}
+
+.eco-item {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: #363636;
+	font-size: 0.65rem;
+	text-align: center;
+	transition: all 0.3s ease;
+	opacity: 0;
+	transform: translate(-50%, -50%);
+}
+
+.eco-item:hover {
+	background: linear-gradient(135deg, #00d4aa, #00b4d8);
+	color: white;
+	box-shadow: 0 8px 25px rgba(0, 212, 170, 0.3);
+}
+
+.eco-item-1:hover {
+	transform: translateX(-50%) scale(1.15) !important;
+}
+
+.eco-item-2:hover,
+.eco-item-3:hover,
+.eco-item-4:hover,
+.eco-item-5:hover {
+	transform: translate(0, 0) scale(1.15) !important;
+}
+
+.eco-item:hover i {
+	color: white;
+}
+
+.eco-item i {
+	font-size: 1.1rem;
+	margin-bottom: 0.3rem;
+	color: #00d4aa;
+}
+
+/* Animaciones de entrada */
+@keyframes slideFromCenter {
+	0% {
+		opacity: 0;
+		transform: translate(-50%, -50%) scale(0.3);
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+		transform: var(--final-transform) scale(1);
+	}
+}
+
+.eco-item-1 { 
+	--final-transform: translateX(-50%);
+	top: 0; 
+	left: 50%; 
+	animation: slideFromCenter 1s ease-out 0.5s forwards;
+}
+
+.eco-item-2 { 
+	--final-transform: translate(0, 0);
+	top: 20%; 
+	right: 10%; 
+	animation: slideFromCenter 1s ease-out 0.8s forwards;
+}
+
+.eco-item-3 { 
+	--final-transform: translate(0, 0);
+	bottom: 20%; 
+	right: 10%; 
+	animation: slideFromCenter 1s ease-out 1.1s forwards;
+}
+
+.eco-item-4 { 
+	--final-transform: translate(0, 0);
+	bottom: 20%; 
+	left: 10%; 
+	animation: slideFromCenter 1s ease-out 1.4s forwards;
+}
+
+.eco-item-5 { 
+	--final-transform: translate(0, 0);
+	top: 20%; 
+	left: 10%; 
+	animation: slideFromCenter 1s ease-out 1.7s forwards;
+}
+
+@media (max-width: 768px) {
+	.hero-body {
+		padding: 1.5rem 1rem;
+	}
+	
+	.ecosystem-visual {
+		display: none;
+	}
+	
+	.buttons {
+		flex-direction: column;
+	}
+	
+	.button {
+		margin-bottom: 1rem;
+	}
+}
+</style> 

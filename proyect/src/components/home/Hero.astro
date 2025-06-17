@@ -1,0 +1,231 @@
+<section class="hero is-fullheight-with-navbar">
+	<div class="hero-body">
+		<div class="container">
+			<div class="columns is-vcentered">
+				<!-- Columna de texto -->
+				<div class="column is-6">
+					<div class="hero-content">
+						<h1 class="title is-1" data-aos="fade-up" data-aos-delay="100">
+							<span class="brand-name">Heclipse</span> – Tu sistema integral de gestión inteligente para centros de salud
+						</h1>
+						<p class="hero-description" data-aos="fade-up" data-aos-delay="300">
+							<strong>Gestión clínica y administrativa</strong> 100% adaptada a vos. Sin moldes. Sin límites. Gestioná <strong>sanatorios, clínicas, hospitales</strong>, estudios por imagen, laboratorios y colegios médicos con una plataforma poderosa y moderna.
+						</p>
+						<div class="hero-buttons">
+							<a href="#contacto" class="button is-primary">
+								Solicitá una demo
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Columna de imagen -->
+				<div class="column is-6">
+					<div class="hero-image-container">
+						<div class="hero-image-wrapper" data-aos="fade-left" data-aos-delay="200">
+							<img 
+								src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?q=80&w=2070" 
+								alt="Médico trabajando con tecnología"
+								class="hero-image"
+							/>
+							<div class="image-badge" data-aos="fade-up" data-aos-delay="800">
+								HOSPITALIZACIÓN
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.hero {
+		background: #f8f9fa;
+		min-height: 90vh;
+		padding: 4rem 0;
+		display: flex;
+		align-items: center;
+	}
+
+	.hero-body {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		padding: 0;
+	}
+
+	.hero-content {
+		padding-right: 4rem;
+	}
+
+	.hero-badge {
+		background: var(--primary);
+		color: white;
+		font-size: 0.75rem;
+		font-weight: 700;
+		letter-spacing: 1px;
+		padding: 0.5rem 1rem;
+		border-radius: 20px;
+		display: inline-block;
+		margin-bottom: 1.5rem;
+	}
+
+	.title {
+		color: #1a1a1a;
+		line-height: 1.1;
+		font-size: 2.8rem;
+		font-weight: 800;
+		margin-bottom: 1.5rem;
+		max-width: 90%;
+	}
+
+	.brand-name {
+		background: linear-gradient(135deg, var(--primary), var(--secondary));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	.hero-description {
+		color: #4a5568;
+		line-height: 1.6;
+		font-size: 1.2rem;
+		margin-bottom: 2rem;
+		max-width: 85%;
+	}
+
+	.hero-description strong {
+		color: #1a1a1a;
+		font-weight: 600;
+	}
+
+	.hero-buttons {
+		margin-bottom: 2rem;
+	}
+
+	.hero-buttons .button {
+		background: var(--primary);
+		color: white;
+		font-weight: 600;
+		border-radius: 25px;
+		transition: all 0.3s ease;
+		padding: 1rem 2rem;
+		font-size: 1rem;
+		border: none;
+		box-shadow: 0 4px 15px rgba(23, 162, 184, 0.3);
+	}
+
+	.hero-buttons .button:hover {
+		background: var(--primary-dark);
+		transform: translateY(-2px);
+		box-shadow: 0 8px 25px rgba(23, 162, 184, 0.4);
+	}
+
+	.hero-stats {
+		color: #4a5568;
+		font-size: 0.95rem;
+		line-height: 1.5;
+	}
+
+	.stats-link {
+		color: var(--primary);
+		text-decoration: none;
+		font-weight: 600;
+	}
+
+	.stats-link:hover {
+		text-decoration: underline;
+	}
+
+	/* Imagen */
+	.hero-image-container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		position: relative;
+	}
+
+	.hero-image-wrapper {
+		position: relative;
+		width: 100%;
+		max-width: 650px;
+	}
+
+	.hero-image {
+		width: 100%;
+		height: auto;
+		border-radius: 20px;
+		box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+		transition: all 0.3s ease;
+	}
+
+	.hero-image:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+	}
+
+	.image-badge {
+		position: absolute;
+		bottom: 20px;
+		right: 20px;
+		background: rgba(255, 255, 255, 0.95);
+		color: #1a1a1a;
+		font-size: 0.75rem;
+		font-weight: 700;
+		letter-spacing: 1px;
+		padding: 0.5rem 1rem;
+		border-radius: 15px;
+		backdrop-filter: blur(10px);
+		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+	}
+
+	@media screen and (max-width: 768px) {
+		.hero {
+			padding: 2rem 0;
+			min-height: auto;
+		}
+
+		.columns {
+			flex-direction: column-reverse;
+		}
+
+		.hero-content {
+			padding-right: 0;
+			padding-top: 2rem;
+			text-align: center;
+		}
+
+		.title {
+			font-size: 2.5rem;
+		}
+
+		.hero-description {
+			font-size: 1.1rem;
+			max-width: 100%;
+		}
+
+		.hero-buttons .button {
+			width: 100%;
+			max-width: 300px;
+		}
+
+		.hero-image-wrapper {
+			max-width: 100%;
+			margin-bottom: 2rem;
+		}
+	}
+
+	@media screen and (max-width: 480px) {
+		.title {
+			font-size: 2rem;
+		}
+		
+		.hero-description {
+			font-size: 1rem;
+		}
+	}
+
+
+</style>

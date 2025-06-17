@@ -1,0 +1,142 @@
+---
+const enfoqueItems = [
+	{
+		icon: "fas fa-robot",
+		title: "Automatizado",
+		description: "Sin intervención manual, desde el ingreso del paciente hasta el reporte contable."
+	},
+	{
+		icon: "fas fa-lightbulb",
+		title: "Intuitivo",
+		description: "Sistema tipo \"carrito de compras\" para facturación rápida y precisa."
+	},
+	{
+		icon: "fas fa-search",
+		title: "Auditable",
+		description: "Registro de cada acción del usuario, dispositivo y tiempo de uso."
+	},
+	{
+		icon: "fas fa-expand-arrows-alt",
+		title: "Escalable",
+		description: "Desde clínicas chicas hasta hospitales complejos."
+	}
+];
+---
+
+<!-- Sección Nuestro Enfoque -->
+<section class="section" id="enfoque" data-aos="fade-up">
+	<div class="container">
+		<div class="has-text-centered mb-6">
+			<h2 class="title is-2 has-text-primary mb-4">Nuestro enfoque</h2>
+			<p class="subtitle is-5 has-text-grey-dark">
+				Principios que guían el desarrollo de nuestra plataforma
+			</p>
+		</div>
+
+		<div class="enfoque-grid">
+			{enfoqueItems.map((item, index) => (
+				<div class="enfoque-card" data-aos="zoom-in" data-aos-delay={index * 100}>
+					<div class="enfoque-icon">
+						<i class={item.icon}></i>
+					</div>
+					<h3 class="enfoque-title">{item.title}</h3>
+					<p class="enfoque-description">{item.description}</p>
+				</div>
+			))}
+		</div>
+	</div>
+</section>
+
+<style>
+	/* Sección Enfoque */
+	.enfoque-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+		margin-top: 3rem;
+	}
+
+	.enfoque-card {
+		background: var(--bg-white);
+		border-radius: var(--border-radius-lg);
+		padding: 2.5rem 2rem;
+		text-align: center;
+		transition: var(--transition-base);
+		border: 1px solid var(--border-light);
+		box-shadow: 0 2px 8px var(--shadow-color);
+		position: relative;
+		overflow: hidden;
+	}
+
+	.enfoque-card::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 4px;
+		background: linear-gradient(90deg, var(--primary), var(--secondary));
+		transform: scaleX(0);
+		transform-origin: left;
+		transition: transform 0.3s ease;
+	}
+
+	.enfoque-card:hover {
+		transform: translateY(-8px);
+		box-shadow: 0 12px 30px var(--shadow-color);
+	}
+
+	.enfoque-card:hover::before {
+		transform: scaleX(1);
+	}
+
+	.enfoque-icon {
+		width: 80px;
+		height: 80px;
+		background: var(--primary-bg-light);
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0 auto 1.5rem;
+		color: var(--primary);
+		font-size: 2rem;
+		transition: var(--transition-base);
+	}
+
+	.enfoque-card:hover .enfoque-icon {
+		background: var(--primary);
+		color: white;
+		transform: scale(1.1);
+	}
+
+	.enfoque-title {
+		font-size: 1.3rem;
+		font-weight: 600;
+		color: var(--text-dark);
+		margin-bottom: 1rem;
+	}
+
+	.enfoque-description {
+		color: var(--text-light);
+		line-height: 1.6;
+		margin: 0;
+	}
+
+	@media (max-width: 768px) {
+		.enfoque-grid {
+			grid-template-columns: 1fr;
+			gap: 1.5rem;
+		}
+
+		.enfoque-card {
+			padding: 2rem 1.5rem;
+		}
+
+		.enfoque-icon {
+			width: 60px;
+			height: 60px;
+			font-size: 1.5rem;
+		}
+	}
+</style> 

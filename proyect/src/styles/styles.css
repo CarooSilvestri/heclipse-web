@@ -1,9 +1,9 @@
 :root {
 	/* Primary Colors */
-	--primary: #2e7d64;
-	--primary-light: #3a9a7c;
-	--primary-dark: #256852;
-	--primary-bg-light: rgba(46, 125, 100, 0.05);
+	--primary: #17a2b8;
+	--primary-light: #28b5cc;
+	--primary-dark: #138fa4;
+	--primary-bg-light: rgba(23, 162, 184, 0.05);
 
 	/* Secondary Colors */
 	--secondary: #c68b2e;
@@ -24,9 +24,9 @@
 	--text-white: var(--bg-white);
 
 	/* Accent Colors */
-	--accent: #a8d5ba;
-	--accent-light: #b9dfc8;
-	--accent-dark: #8fc3a5;
+	--accent: #059669;
+	--accent-light: #10b981;
+	--accent-dark: #047857;
 
 	/* Status Colors */
 	--success: var(--primary);

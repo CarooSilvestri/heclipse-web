@@ -8,7 +8,7 @@ import Footer from "./parts/Footer.astro";
 <html>
 	<BaseHeader />
 	<body class="has-background-white">
-		<div class="container is-fluid px-4 px-5-desktop">
+		<div class="">
 			<Navbar />
 			<slot />
 		</div>
@@ -17,6 +17,8 @@ import Footer from "./parts/Footer.astro";
 			AOS.init({
 				duration: 800,
 				once: true,
+				easing: 'ease-out-cubic',
+				offset: 50
 			});
 		</script>
 	</body>

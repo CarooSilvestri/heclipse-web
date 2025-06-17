@@ -4,15 +4,16 @@ import logo from "../../assets/logo.png";
 import logoCompleto from "../../assets/logo_completo.png";
 
 const menuItems = [
-	{ href: "#inicio", text: "Inicio" },
-	{ href: "#nosotros", text: "Nosotros" },
-	{ href: "#por-que-elegirnos", text: "¿Por qué elegirnos?" },
-	{ href: "#servicios", text: "Servicios" },
+	{ href: "/", text: "Inicio" },
+	{ href: "/#por-que-elegirnos", text: "Por qué Heclipse" },
+	{ href: "/modulos", text: "Soluciones" },
+	{ href: "/#clientes", text: "Clientes" },
+	{ href: "/nosotros", text: "Nosotros" },
 ];
 ---
 
 <nav
-	class="navbar is-white py-4"
+	class="navbar is-white py-4 sticky-navbar"
 	role="navigation"
 	aria-label="main navigation">
 	<div class="container">
@@ -50,7 +51,7 @@ const menuItems = [
 			<div class="navbar-start" style="flex-grow: 1; justify-content: center;">
 				{
 					menuItems.map((item) => (
-						<a class="navbar-item has-text-weight-medium px-4" href={item.href}>
+						<a class="navbar-item menu-link has-text-weight-medium px-4" href={item.href}>
 							{item.text}
 						</a>
 					))
@@ -61,7 +62,7 @@ const menuItems = [
 				<div class="navbar-item">
 					<div class="buttons">
 						<a class="button is-primary is-rounded" href="#contacto">
-							<span class="button-text">Contacto</span>
+							<span class="button-text">Pedir una Demo</span>
 							<span class="icon">
 								<i class="bx bx-right-arrow-alt"></i>
 							</span>
@@ -74,11 +75,35 @@ const menuItems = [
 </nav>
 
 <style>
+	.sticky-navbar {
+		position: sticky;
+		top: 0;
+		z-index: 100;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+		backdrop-filter: blur(10px);
+	}
+
 	.navbar-item {
 		font-weight: 500;
-		transition: var(--transition-base);
+		transition: all 0.4s ease-out;
 		color: var(--text-regular);
+		position: relative;
+		transform-origin: center;
 	}
+
+	.navbar-item.menu-link::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		width: 0;
+		height: 2px;
+		background: var(--secondary);
+		transition: all 0.4s ease-out;
+		transform: translateX(-50%);
+		border-radius: 2px;
+	}
+
 	.navbar-logo {
 		width: fit-content;
 	}
@@ -88,12 +113,16 @@ const menuItems = [
 		background-color: transparent !important;
 	}
 
+	.navbar-item.menu-link:hover::after {
+		width: 100%;
+	}
+
 	.button.is-primary {
 		background-color: var(--primary);
 		color: white;
 		transition: all 0.3s ease;
 		font-weight: 500;
-		width: 120px;
+		width: 140px;
 		position: absolute;
 		overflow: hidden;
 		padding: 0.75em 0;
@@ -105,8 +134,8 @@ const menuItems = [
 
 	.button.is-primary:hover {
 		background-color: var(--primary-dark);
-		width: 160px;
-		box-shadow: 0 4px 12px rgba(0, 150, 136, 0.2);
+		width: 180px;
+		box-shadow: 0 4px 12px rgba(23, 162, 184, 0.2);
 	}
 
 	.button .button-text {
