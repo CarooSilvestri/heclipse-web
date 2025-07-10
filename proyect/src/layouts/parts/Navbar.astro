@@ -5,7 +5,7 @@ import logoCompleto from "../../assets/logo_completo.png";
 
 const menuItems = [
 	{ href: "/", text: "Inicio" },
-	{ href: "/#por-que-elegirnos", text: "Por qué Heclipse" },
+	{ href: "/porque-heclipse", text: "¿Por qué Heclipse?" },
 	{ href: "/modulos", text: "Soluciones" },
 	{ href: "/#clientes", text: "Clientes" },
 	{ href: "/nosotros", text: "Nosotros" },
@@ -22,15 +22,15 @@ const menuItems = [
 				<Image
 					src={logoCompleto}
 					alt="Logo"
-					width={100}
+					width={120}
 					height={150}
 					class="main-logo animate__animated animate__fadeIn"
 				/>
 				<Image
 					src={logo}
 					alt="Logo"
-					width={35}
-					height={35}
+					width={50}
+					height={50}
 					class="mobile-logo animate__animated animate__fadeIn"
 				/>
 			</a>
@@ -135,7 +135,7 @@ const menuItems = [
 	.button.is-primary:hover {
 		background-color: var(--primary-dark);
 		width: 180px;
-		box-shadow: 0 4px 12px rgba(23, 162, 184, 0.2);
+		box-shadow: 0 4px 12px rgba(76, 175, 80, 0.2);
 	}
 
 	.button .button-text {
@@ -193,6 +193,32 @@ const menuItems = [
 		.navbar {
 			padding: 1rem 0;
 		}
+	}
+
+	/* Navbar burger styles */
+	.navbar-burger {
+		color: var(--neutral-dark);
+	}
+
+	.navbar-burger span {
+		background-color: var(--neutral-dark);
+		transition: all 0.3s ease;
+	}
+
+	.navbar-burger:hover span {
+		background-color: var(--secondary);
+	}
+
+	.navbar-burger.is-active span:nth-child(1) {
+		transform: translateY(5px) rotate(45deg);
+	}
+
+	.navbar-burger.is-active span:nth-child(2) {
+		opacity: 0;
+	}
+
+	.navbar-burger.is-active span:nth-child(3) {
+		transform: translateY(-5px) rotate(-45deg);
 	}
 
 	@media screen and (max-width: 1023px) {

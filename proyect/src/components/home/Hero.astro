@@ -1,3 +1,7 @@
+---
+import gestionImg from '../../assets/gestion-administrativa.png';
+---
+
 <section class="hero is-fullheight-with-navbar">
 	<div class="hero-body">
 		<div class="container">
@@ -6,15 +10,28 @@
 				<div class="column is-6">
 					<div class="hero-content">
 						<h1 class="title is-1" data-aos="fade-up" data-aos-delay="100">
-							<span class="brand-name">Heclipse</span> – Tu sistema integral de gestión inteligente para centros de salud
+							<span class="brand-name">HECLIPSE</span>, donde la salud y el software se entienden.
 						</h1>
+						<h2 class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+							Software de Gestión Inteligente para tu empresa de salud
+						</h2>
 						<p class="hero-description" data-aos="fade-up" data-aos-delay="300">
-							<strong>Gestión clínica y administrativa</strong> 100% adaptada a vos. Sin moldes. Sin límites. Gestioná <strong>sanatorios, clínicas, hospitales</strong>, estudios por imagen, laboratorios y colegios médicos con una plataforma poderosa y moderna.
+							<strong>Gestión clínica y administrativa</strong> 100% adaptada a vos. Sin moldes. Sin límites. Gestioná <strong>Sanatorios, Clínicas, Hospitales, Centros de Diagnósticos, Laboratorios y Colegios Médicos</strong>, con una plataforma poderosa y moderna.
 						</p>
-						<div class="hero-buttons">
-							<a href="#contacto" class="button is-primary">
-								Solicitá una demo
-							</a>
+												<div class="hero-form">
+							<form class="email-form" data-aos="fade-up" data-aos-delay="400">
+								<div class="form-container">
+									<input 
+										type="email" 
+										class="email-input" 
+										placeholder="Ingresá tu email"
+										required
+									/>
+									<button type="submit" class="submit-button">
+										Prueba gratis
+									</button>
+								</div>
+							</form>
 						</div>
 					</div>
 				</div>
@@ -24,13 +41,11 @@
 					<div class="hero-image-container">
 						<div class="hero-image-wrapper" data-aos="fade-left" data-aos-delay="200">
 							<img 
-								src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?q=80&w=2070" 
-								alt="Médico trabajando con tecnología"
+								src={gestionImg.src} 
+								alt="Gestión administrativa con tecnología"
 								class="hero-image"
 							/>
-							<div class="image-badge" data-aos="fade-up" data-aos-delay="800">
-								HOSPITALIZACIÓN
-							</div>
+
 						</div>
 					</div>
 				</div>
@@ -43,7 +58,7 @@
 	.hero {
 		background: #f8f9fa;
 		min-height: 90vh;
-		padding: 4rem 0;
+		padding: 4.5rem 0;
 		display: flex;
 		align-items: center;
 	}
@@ -57,6 +72,7 @@
 
 	.hero-content {
 		padding-right: 4rem;
+		max-width: 580px;
 	}
 
 	.hero-badge {
@@ -73,26 +89,35 @@
 
 	.title {
 		color: #1a1a1a;
-		line-height: 1.1;
+		line-height: 1.15;
 		font-size: 2.8rem;
 		font-weight: 800;
-		margin-bottom: 1.5rem;
-		max-width: 90%;
+		margin-bottom: 2rem;
+		max-width: 100%;
+		letter-spacing: -0.02em;
 	}
 
 	.brand-name {
-		background: linear-gradient(135deg, var(--primary), var(--secondary));
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
+		color: var(--secondary);
+		font-weight: 900;
+	}
+
+	.hero-subtitle {
+		color: var(--primary);
+		font-size: 1.4rem;
+		font-weight: 600;
+		line-height: 1.4;
+		margin-bottom: 2.5rem;
+		max-width: 100%;
+		font-family: var(--font-heading);
 	}
 
 	.hero-description {
 		color: #4a5568;
-		line-height: 1.6;
-		font-size: 1.2rem;
-		margin-bottom: 2rem;
-		max-width: 85%;
+		line-height: 1.7;
+		font-size: 1.15rem;
+		margin-bottom: 3rem;
+		max-width: 100%;
 	}
 
 	.hero-description strong {
@@ -100,26 +125,75 @@
 		font-weight: 600;
 	}
 
-	.hero-buttons {
-		margin-bottom: 2rem;
+	.hero-form {
+		margin-bottom: 3rem;
 	}
 
-	.hero-buttons .button {
-		background: var(--primary);
-		color: white;
-		font-weight: 600;
-		border-radius: 25px;
+	.email-form {
+		width: 100%;
+		max-width: 480px;
+	}
+
+	.form-container {
+		display: flex;
+		background: white;
+		border-radius: 50px;
+		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06), 0 2px 8px rgba(0, 0, 0, 0.04);
+		overflow: hidden;
+		border: 2px solid #f3f4f6;
 		transition: all 0.3s ease;
-		padding: 1rem 2rem;
-		font-size: 1rem;
-		border: none;
-		box-shadow: 0 4px 15px rgba(23, 162, 184, 0.3);
+		padding: 4px;
+		align-items: center;
 	}
 
-	.hero-buttons .button:hover {
-		background: var(--primary-dark);
-		transform: translateY(-2px);
-		box-shadow: 0 8px 25px rgba(23, 162, 184, 0.4);
+	.form-container:focus-within {
+		border-color: #4CAF50;
+		box-shadow: 0 8px 32px rgba(76, 175, 80, 0.12), 0 0 0 3px rgba(76, 175, 80, 0.08);
+		transform: translateY(-1px);
+	}
+
+	.email-input {
+		flex: 1;
+		padding: 1.1rem 1.25rem;
+		border: none;
+		outline: none;
+		font-size: 1rem;
+		color: #1f2937;
+		background: transparent;
+		font-family: var(--font-body);
+		font-weight: 400;
+	}
+
+	.email-input::placeholder {
+		color: #9ca3af;
+		font-weight: 400;
+	}
+
+	.submit-button {
+		background: #4CAF50;
+		color: white;
+		border: none;
+		padding: 1.1rem 1.5rem;
+		font-size: 0.95rem;
+		font-weight: 600;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		font-family: var(--font-heading);
+		white-space: nowrap;
+		border-radius: 44px;
+		box-shadow: 0 4px 16px rgba(76, 175, 80, 0.3);
+		letter-spacing: 0.025em;
+	}
+
+	.submit-button:hover {
+		background: #45a049;
+		transform: translateY(-1px);
+		box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+	}
+
+	.submit-button:active {
+		transform: translateY(0);
+		box-shadow: 0 3px 12px rgba(76, 175, 80, 0.4);
 	}
 
 	.hero-stats {
@@ -183,7 +257,7 @@
 
 	@media screen and (max-width: 768px) {
 		.hero {
-			padding: 2rem 0;
+			padding: 3rem 0;
 			min-height: auto;
 		}
 
@@ -193,22 +267,49 @@
 
 		.hero-content {
 			padding-right: 0;
-			padding-top: 2rem;
+			padding-top: 3rem;
 			text-align: center;
+			max-width: 100%;
 		}
 
 		.title {
-			font-size: 2.5rem;
+			font-size: 2.4rem;
+			margin-bottom: 1.5rem;
+		}
+
+		.hero-subtitle {
+			font-size: 1.2rem;
+			margin-bottom: 2rem;
 		}
 
 		.hero-description {
 			font-size: 1.1rem;
+			margin-bottom: 2.5rem;
+		}
+
+		.email-form {
 			max-width: 100%;
 		}
 
-		.hero-buttons .button {
-			width: 100%;
-			max-width: 300px;
+		.form-container {
+			flex-direction: row;
+			border-radius: 50px;
+			padding: 4px;
+			gap: 0;
+		}
+
+		.submit-button {
+			margin-top: 0;
+			border-radius: 46px;
+			padding: 0.9rem 1.2rem;
+			font-size: 0.85rem;
+			white-space: nowrap;
+		}
+
+		.email-input {
+			padding: 1rem 1rem;
+			text-align: left;
+			font-size: 0.9rem;
 		}
 
 		.hero-image-wrapper {
@@ -218,11 +319,46 @@
 	}
 
 	@media screen and (max-width: 480px) {
+		.hero {
+			padding: 2rem 0;
+		}
+
 		.title {
 			font-size: 2rem;
+			margin-bottom: 1rem;
+		}
+
+		.hero-subtitle {
+			font-size: 1.1rem;
+			margin-bottom: 1.5rem;
 		}
 		
 		.hero-description {
+			font-size: 1rem;
+			margin-bottom: 2rem;
+		}
+
+		.hero-content {
+			padding-top: 2rem;
+		}
+
+		.form-container {
+			flex-direction: column;
+			border-radius: 24px;
+			padding: 6px;
+			gap: 6px;
+		}
+
+		.submit-button {
+			border-radius: 20px;
+			padding: 1rem 1.5rem;
+			font-size: 0.95rem;
+			margin-top: 0;
+		}
+
+		.email-input {
+			padding: 1rem 1.25rem;
+			text-align: center;
 			font-size: 1rem;
 		}
 	}

@@ -1,5 +1,7 @@
 ---
-// src/components/ModulosMedicos.astro
+// src/components/modulos/ModulosMedicos.astro
+import backgroundImg from "../../assets/Que-es-la-gestion-medica-1.webp";
+
 const modulosMedicos = [
 	{
 		title: "Historia Clínica Electrónica",
@@ -44,17 +46,26 @@ const modulosMedicos = [
 ---
 
 <section class="section" id="modulos-medicos">
-	<div class="container">
-		<div class="has-text-centered mb-6">
-			<h2 class="title is-2 has-text-primary mb-4">
-				<i class="fas fa-user-md mr-3"></i>
-				Gestión Médica
-			</h2>
-			<p class="subtitle is-5 has-text-grey-dark">
-				Herramientas especializadas para la atención médica
-			</p>
+	<!-- Hero Header -->
+	<section class="hero is-medium modulos-medicos-hero" style={`background: #4CAF50 url(${backgroundImg.src}) center/cover no-repeat;`}>
+		<div class="hero-overlay"></div>
+		<div class="hero-body">
+			<div class="container">
+				<div class="has-text-centered">
+					<h1 class="title is-1 has-text-white mb-4">
+						<i class="fas fa-user-md mr-3"></i>
+						Gestión Médica
+					</h1>
+					<p class="subtitle is-4 has-text-white">
+						Herramientas especializadas para la atención médica profesional
+					</p>
+				</div>
+			</div>
 		</div>
+	</section>
 
+	<!-- Módulos Content -->
+	<div class="container">
 		<div class="modules-grid">
 			{modulosMedicos.map((modulo) => (
 				<div class="module-card">
@@ -84,9 +95,58 @@ const modulosMedicos = [
 </section>
 
 <style>
+	/* Hero Header Styles */
+	.modulos-medicos-hero {
+		position: relative;
+		min-height: 60vh;
+		display: flex;
+		align-items: center;
+		margin-bottom: 4rem;
+	}
+
+	.hero-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: rgba(46, 125, 50, 0.8);
+		z-index: 1;
+	}
+
+	.modulos-medicos-hero .hero-body {
+		position: relative;
+		z-index: 2;
+		padding: 3rem 1.5rem;
+		display: flex;
+		align-items: center;
+		min-height: 60vh;
+	}
+
+	.modulos-medicos-hero .container {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.modulos-medicos-hero .title {
+		font-size: 3rem;
+		font-weight: 700;
+		margin-bottom: 1rem;
+	}
+
+	.modulos-medicos-hero .subtitle {
+		font-size: 1.25rem;
+		max-width: 600px;
+		margin: 0 auto;
+		line-height: 1.5;
+	}
+
+	/* Existing Module Styles */
 	.modules-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+		grid-template-columns: repeat(3, 1fr);
 		gap: 2rem;
 		margin-top: 3rem;
 	}
@@ -167,7 +227,7 @@ const modulosMedicos = [
 		margin-bottom: 0;
 	}
 
-	@media (max-width: 768px) {
+	@media (max-width: 1024px) {
 		.modules-grid {
 			grid-template-columns: 1fr;
 			gap: 1.5rem;
@@ -188,6 +248,35 @@ const modulosMedicos = [
 			height: 50px;
 			font-size: 1.2rem;
 			margin: 0 auto;
+		}
+
+		/* Hero responsive styles */
+		.modulos-medicos-hero .hero-body {
+			padding: 2.5rem 1.5rem;
+			min-height: 50vh;
+		}
+
+		.modulos-medicos-hero .title {
+			font-size: 2.5rem;
+		}
+
+		.modulos-medicos-hero .subtitle {
+			font-size: 1.1rem;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.modulos-medicos-hero .hero-body {
+			padding: 2rem 1rem;
+			min-height: 45vh;
+		}
+
+		.modulos-medicos-hero .title {
+			font-size: 2rem;
+		}
+
+		.modulos-medicos-hero .subtitle {
+			font-size: 1rem;
 		}
 	}
 </style> 

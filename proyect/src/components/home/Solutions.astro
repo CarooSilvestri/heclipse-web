@@ -89,17 +89,17 @@ const solutionAreas = [
 		align-items: center;
 		justify-content: center;
 		margin: 0 auto 1.5rem;
-		color: #17a2b8;
+		color: var(--primary);
 		font-size: 2rem;
 		transition: var(--transition-base);
 		border: 2px solid #e9ecef;
 	}
 
 	.solution-card:hover .solution-icon {
-		background: #c68b2e;
+		background: var(--secondary);
 		color: white;
 		transform: scale(1.1);
-		border-color: #c68b2e;
+		border-color: var(--secondary);
 	}
 
 	.solution-title {
@@ -135,13 +135,13 @@ const solutionAreas = [
 	}
 
 	.solution-card:hover .module-tag {
-		background: #17a2b8;
+		background: var(--primary);
 		color: white;
 	}
 
 	/* ===== BOTÓN CTA AZUL ===== */
 	.cta-button-blue {
-		background: #17a2b8;
+		background: var(--primary);
 		color: white;
 		border: none;
 		padding: 1rem 2rem;
@@ -153,13 +153,13 @@ const solutionAreas = [
 		align-items: center;
 		gap: 0.5rem;
 		transition: all 0.3s ease;
-		box-shadow: 0 4px 15px rgba(23, 162, 184, 0.3);
+		box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
 	}
 
 	.cta-button-blue:hover {
-		background: #138496;
+		background: var(--primary-dark);
 		transform: translateY(-2px);
-		box-shadow: 0 6px 20px rgba(23, 162, 184, 0.4);
+		box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
 		color: white;
 		text-decoration: none;
 	}
@@ -180,7 +180,7 @@ const solutionAreas = [
 
 		.solution-card {
 			padding: 2rem 1.5rem;
-			margin-bottom: 1.5rem;
+			margin-bottom: 1rem;
 		}
 
 		.solution-icon {
@@ -200,6 +200,27 @@ const solutionAreas = [
 		.module-tag {
 			font-size: 0.7rem;
 			padding: 0.2rem 0.6rem;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.solution-card {
+			padding: 1.5rem 1rem;
+			margin-bottom: 0.75rem;
+		}
+
+		.solution-icon {
+			width: 55px;
+			height: 55px;
+			font-size: 1.3rem;
+		}
+
+		.solution-title {
+			font-size: 1rem;
+		}
+
+		.solution-description {
+			font-size: 0.85rem;
 		}
 	}
 </style> 

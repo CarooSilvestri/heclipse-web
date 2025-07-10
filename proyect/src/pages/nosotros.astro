@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Contact from "../components/shared/Contact.astro";
+import backgroundImg from "../assets/buen-ambiente-de-trabajo.jpg";
 
 const valores = [
 	{
@@ -54,7 +55,8 @@ const enfoqueItems = [
 <Layout>
 	<main>
 		<!-- Hero Section -->
-		<section class="hero is-medium has-background-primary">
+		<section class="hero is-medium nosotros-hero" style={`background: #4CAF50 url(${backgroundImg.src}) center/cover no-repeat;`}>
+			<div class="hero-overlay"></div>
 			<div class="hero-body">
 				<div class="container">
 					<div class="has-text-centered">
@@ -166,6 +168,55 @@ const enfoqueItems = [
 </Layout>
 
 <style>
+	/* Nosotros Hero */
+	.nosotros-hero {
+		position: relative;
+		min-height: 60vh;
+		display: flex;
+		align-items: center;
+	}
+
+	.hero-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: rgba(46, 125, 50, 0.8);
+		z-index: 1;
+	}
+
+	.nosotros-hero .hero-body {
+		position: relative;
+		z-index: 2;
+		padding: 3rem 1.5rem;
+		display: flex;
+		align-items: center;
+		min-height: 60vh;
+	}
+
+	.nosotros-hero .container {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.nosotros-hero .title,
+	.nosotros-hero .subtitle {
+		font-weight: 700;
+	}
+
+	.nosotros-hero .title {
+		font-size: 3.5rem;
+		margin-bottom: 1rem;
+	}
+
+	.nosotros-hero .subtitle {
+		font-size: 1.5rem;
+		opacity: 0.95;
+	}
+
 	/* Historia */
 	.highlight-text {
 		color: var(--secondary);
@@ -265,10 +316,6 @@ const enfoqueItems = [
 		font-size: 0.95rem;
 	}
 
-
-
-
-
 	/* Enfoque */
 	.enfoque-grid {
 		display: grid;
@@ -345,6 +392,19 @@ const enfoqueItems = [
 	}
 
 	@media (max-width: 768px) {
+		.nosotros-hero .hero-body {
+			padding: 2.5rem 1.5rem;
+			min-height: 50vh;
+		}
+
+		.nosotros-hero .title {
+			font-size: 2.5rem;
+		}
+
+		.nosotros-hero .subtitle {
+			font-size: 1.2rem;
+		}
+
 		.valores-grid {
 			grid-template-columns: 1fr;
 			gap: 1.5rem;
@@ -382,8 +442,6 @@ const enfoqueItems = [
 			font-size: 1.5rem;
 		}
 
-
-
 		.enfoque-grid {
 			grid-template-columns: 1fr;
 			gap: 1.5rem;
@@ -400,6 +458,21 @@ const enfoqueItems = [
 		.historia-image {
 			padding-left: 0;
 			margin-top: 2rem;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.nosotros-hero .hero-body {
+			padding: 2rem 1rem;
+			min-height: 45vh;
+		}
+
+		.nosotros-hero .title {
+			font-size: 2rem;
+		}
+
+		.nosotros-hero .subtitle {
+			font-size: 1.1rem;
 		}
 	}
 </style> 

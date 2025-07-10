@@ -1,0 +1,100 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/home/Hero.astro";
+import WhyUs from "../components/home/WhyUs.astro";
+import Diferenciales from "../components/home/Diferenciales.astro";
+import Solutions from "../components/home/Solutions.astro";
+import Technology from "../components/home/Technology.astro";
+import Clients from "../components/home/Clients.astro";
+import Contact from "../components/shared/Contact.astro";
+import backgroundImg from "../assets/gestion-hospitalaria.webp";
+---
+
+<Layout>
+	<main>
+		<!-- Hero Section -->
+		<section class="hero is-medium porque-heclipse-hero" style={`background: #4CAF50 url(${backgroundImg.src}) center/cover no-repeat;`}>
+			<div class="hero-overlay"></div>
+			<div class="hero-body">
+				<div class="container">
+					<div class="has-text-centered">
+						<h1 class="title is-1 has-text-white mb-4">
+							¿Por qué elegir Heclipse?
+						</h1>
+						<p class="subtitle is-4 has-text-white">
+							Descubrí las ventajas que nos hacen únicos en el mercado de software médico
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<WhyUs />
+		<Diferenciales />
+		<Contact />
+	</main>
+</Layout>
+
+<style>
+	/* Porque Heclipse Hero */
+	.porque-heclipse-hero {
+		position: relative;
+		min-height: 60vh;
+		display: flex;
+		align-items: center;
+	}
+
+	.hero-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: rgba(46, 125, 50, 0.8);
+		z-index: 1;
+	}
+
+	.porque-heclipse-hero .hero-body {
+		position: relative;
+		z-index: 2;
+		padding: 3rem 1.5rem;
+		display: flex;
+		align-items: center;
+		min-height: 60vh;
+	}
+
+	.porque-heclipse-hero .container {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.porque-heclipse-hero .title {
+		font-size: 3rem;
+		font-weight: 700;
+		margin-bottom: 1rem;
+	}
+
+	.porque-heclipse-hero .subtitle {
+		font-size: 1.25rem;
+		max-width: 600px;
+		margin: 0 auto;
+		line-height: 1.5;
+	}
+
+	@media screen and (max-width: 768px) {
+		.porque-heclipse-hero .title {
+			font-size: 2.5rem;
+		}
+
+		.porque-heclipse-hero .subtitle {
+			font-size: 1.1rem;
+		}
+
+		.porque-heclipse-hero .hero-body {
+			padding: 2rem 1rem;
+			min-height: 50vh;
+		}
+	}
+</style> 

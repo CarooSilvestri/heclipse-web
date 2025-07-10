@@ -1,32 +1,33 @@
 :root {
-	/* Primary Colors */
-	--primary: #17a2b8;
-	--primary-light: #28b5cc;
-	--primary-dark: #138fa4;
-	--primary-bg-light: rgba(23, 162, 184, 0.05);
+	/* Primary Colors - Using the green from the new palette */
+	--primary: #4CAF50;
+	--primary-light: #66BB6A;
+	--primary-dark: #388E3C;
+	--primary-bg-light: rgba(76, 175, 80, 0.05);
 
-	/* Secondary Colors */
-	--secondary: #c68b2e;
-	--secondary-light: #d69f42;
-	--secondary-dark: #a57526;
+	/* Secondary Colors - Using the golden from the new palette */
+	--secondary: #C9A43D;
+	--secondary-light: #D4B55A;
+	--secondary-dark: #B8942A;
 
-	/* Neutral Colors */
-	--neutral-dark: #103152;
-	--neutral-light: #f1f4f6;
+	/* Neutral Colors - Using the grays from the new palette */
+	--neutral-dark: #1A1A1A;
+	--neutral-medium: #2F2F2F;
+	--neutral-light: #f8f9fa;
 	--bg-white: #ffffff;
 	--border-light: #e5e8ea;
 	--bg-lighter: #f8fafc;
 
 	/* Text Colors */
 	--text-dark: var(--neutral-dark);
-	--text-regular: #2a4a6d;
+	--text-regular: var(--neutral-medium);
 	--text-light: #4a6785;
 	--text-white: var(--bg-white);
 
 	/* Accent Colors */
-	--accent: #059669;
-	--accent-light: #10b981;
-	--accent-dark: #047857;
+	--accent: #4CAF50;
+	--accent-light: #66BB6A;
+	--accent-dark: #388E3C;
 
 	/* Status Colors */
 	--success: var(--primary);
@@ -35,8 +36,8 @@
 	--info: var(--accent);
 
 	/* UI Colors */
-	--shadow-color: rgba(16, 49, 82, 0.1);
-	--overlay-color: rgba(16, 49, 82, 0.5);
+	--shadow-color: rgba(26, 26, 26, 0.1);
+	--overlay-color: rgba(26, 26, 26, 0.5);
 
 	/* Typography */
 	--font-heading: "Plus Jakarta Sans", sans-serif;
@@ -118,7 +119,13 @@ a:hover {
 
 @media screen and (max-width: 768px) {
 	.container {
-		padding: 0 0.5rem;
+		padding: 0 1rem;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.container {
+		padding: 0 0.75rem;
 	}
 }
 

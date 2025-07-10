@@ -1,5 +1,7 @@
 ---
-// src/components/ModulosAdministrativos.astro
+// src/components/modulos/ModulosAdministrativos.astro
+import backgroundImg from "../../assets/gestion-administrativa.png";
+
 const modulosAdministrativos = [
 	{
 		title: "Facturación Integral",
@@ -83,17 +85,26 @@ const modulosAdministrativos = [
 ---
 
 <section class="section has-background-light" id="modulos-administrativos">
-	<div class="container">
-		<div class="has-text-centered mb-6">
-			<h2 class="title is-2 has-text-secondary mb-4">
-				<i class="fas fa-cogs mr-3"></i>
-				Gestión Administrativa
-			</h2>
-			<p class="subtitle is-5 has-text-grey-dark">
-				Automatización completa de procesos administrativos
-			</p>
+	<!-- Hero Header -->
+	<section class="hero is-medium modulos-admin-hero" style={`background: #FF9800 url(${backgroundImg.src}) center/cover no-repeat;`}>
+		<div class="hero-overlay"></div>
+		<div class="hero-body">
+			<div class="container">
+				<div class="has-text-centered">
+					<h1 class="title is-1 has-text-white mb-4">
+						<i class="fas fa-cogs mr-3"></i>
+						Gestión Administrativa
+					</h1>
+					<p class="subtitle is-4 has-text-white">
+						Automatización completa de procesos administrativos y contables
+					</p>
+				</div>
+			</div>
 		</div>
+	</section>
 
+	<!-- Módulos Content -->
+	<div class="container content-section">
 		<div class="modules-grid">
 			{modulosAdministrativos.map((modulo) => (
 				<div class="module-card">
@@ -123,11 +134,64 @@ const modulosAdministrativos = [
 </section>
 
 <style>
+	/* Hero Header Styles */
+	.modulos-admin-hero {
+		position: relative;
+		min-height: 60vh;
+		display: flex;
+		align-items: center;
+		margin-bottom: 2rem;
+	}
+
+	.hero-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: rgba(184, 148, 42, 0.8);
+		z-index: 1;
+	}
+
+	.modulos-admin-hero .hero-body {
+		position: relative;
+		z-index: 2;
+		padding: 3rem 1.5rem;
+		display: flex;
+		align-items: center;
+		min-height: 60vh;
+	}
+
+	.modulos-admin-hero .container {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.modulos-admin-hero .title {
+		font-size: 3rem;
+		font-weight: 700;
+		margin-bottom: 1rem;
+	}
+
+	.modulos-admin-hero .subtitle {
+		font-size: 1.25rem;
+		max-width: 600px;
+		margin: 0 auto;
+		line-height: 1.5;
+	}
+
+	/* Content Section with reduced padding */
+	.content-section {
+		padding: 2rem 1.5rem;
+	}
+
 	.modules-grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 		gap: 2rem;
-		margin-top: 3rem;
+		margin-top: 1rem;
 	}
 
 	.module-card {
@@ -227,6 +291,44 @@ const modulosAdministrativos = [
 			height: 50px;
 			font-size: 1.2rem;
 			margin: 0 auto;
+		}
+
+		/* Content padding adjustment for mobile */
+		.content-section {
+			padding: 1.5rem 1rem;
+		}
+
+		/* Hero responsive styles */
+		.modulos-admin-hero .hero-body {
+			padding: 2.5rem 1.5rem;
+			min-height: 50vh;
+		}
+
+		.modulos-admin-hero .title {
+			font-size: 2.5rem;
+		}
+
+		.modulos-admin-hero .subtitle {
+			font-size: 1.1rem;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.content-section {
+			padding: 1rem 0.5rem;
+		}
+
+		.modulos-admin-hero .hero-body {
+			padding: 2rem 1rem;
+			min-height: 45vh;
+		}
+
+		.modulos-admin-hero .title {
+			font-size: 2rem;
+		}
+
+		.modulos-admin-hero .subtitle {
+			font-size: 1rem;
 		}
 	}
 </style> 

@@ -1,5 +1,7 @@
 ---
 // src/components/home/Diferenciales.astro
+import gestionMedica from "../../assets/Que-es-la-gestion-medica-1.webp";
+
 const diferenciales = [
 	{
 		icon: "bx bx-dollar-circle",
@@ -7,7 +9,7 @@ const diferenciales = [
 		description: "Apuesta por software gratuito y abierto: Linux, OpenJDK, PostgreSQL, Chrome."
 	},
 	{
-		icon: "bx bx-shield-check",
+		icon: "bx bx-shield",
 		title: "Seguridad y respaldo",
 		description: "Backups automáticos, confidencialidad, exportación completa de datos al dar de baja el servicio."
 	},
@@ -17,15 +19,15 @@ const diferenciales = [
 		description: "Acompañamos tu implementación local o en la nube y brindamos soporte tras los primeros 3 meses de uso."
 	},
 	{
-		icon: "bx bx-user-detail",
+		icon: "bx bx-user-circle",
 		title: "Roles y permisos configurables",
 		description: "Cada usuario accede solo a lo que necesita (ej. secretaria vs contador vs médico)."
 	}
 ];
 
 const sectionContent = {
-	title: "Nuestros Diferenciales",
-	subtitle: "Lo que nos hace únicos en el mercado de software médico",
+	title: "Cómo lo Hacemos Diferente",
+	subtitle: "Nuestro enfoque único en el mercado",
 	description: "Características distintivas que garantizan el mejor valor y experiencia para tu institución médica."
 };
 ---
@@ -45,7 +47,7 @@ const sectionContent = {
 			<!-- Image Column -->
 			<div class="column is-5" data-aos="fade-right">
 				<div class="image-container">
-					<img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Equipo médico profesional" class="diferencial-image">
+					<img src={gestionMedica.src} alt="Gestión médica profesional" class="diferencial-image">
 				</div>
 			</div>
 
@@ -72,7 +74,7 @@ const sectionContent = {
 <style>
 	.diferenciales-section {
 		background-color: var(--neutral-light, #f8f9fa);
-		padding: 3rem 0;
+		padding: 3rem 0 5rem 0;
 	}
 
 	.title-dark {
@@ -222,6 +224,7 @@ const sectionContent = {
 			padding: 1rem;
 			flex-direction: column;
 			text-align: center;
+			align-items: center;
 		}
 
 		.diferencial-icon {
@@ -230,6 +233,12 @@ const sectionContent = {
 			width: 40px;
 			height: 40px;
 			font-size: 1.3rem;
+			align-self: center;
+		}
+
+		.diferencial-content {
+			text-align: center;
+			align-items: center;
 		}
 
 		.diferencial-title {
