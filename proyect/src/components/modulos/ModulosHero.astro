@@ -1,0 +1,422 @@
+---
+// src/components/modulos/ModulosHero.astro
+---
+
+<section class="hero-modulos is-fullheight-with-navbar">
+	<div class="hero-body">
+		<div class="container">
+			<div class="columns is-vcentered">
+				<div class="column is-6">
+					<div class="hero-content">
+						<h1 class="hero-title">
+							<span class="title-highlight">Ecosistema Digital</span>
+							<span class="title-main">Hospitalario</span>
+						</h1>
+						<h2 class="hero-subtitle">
+							NUESTRA PROPUESTA INTEGRAL
+						</h2>
+						<p class="hero-description">
+							Automatizamos e integramos procesos por medio de un innovador ecosistema de soluciones en la nube, para que usted maximice la productividad y seguridad de su organización, y sus pacientes tengan la mejor experiencia.
+						</p>
+					</div>
+				</div>
+				
+				<div class="column is-6">
+					<div class="ecosystem-visual">
+						<div class="ecosystem-center">
+							<div class="center-circle">
+								<div class="center-icon">
+									<i class="fas fa-heartbeat"></i>
+								</div>
+								<h3 class="center-title">Heclipse</h3>
+								<p class="center-subtitle">Smart HIS</p>
+							</div>
+						</div>
+						
+						<div class="ecosystem-items">
+							<div class="eco-item eco-item-1">
+								<div class="eco-icon">
+									<i class="fas fa-cogs"></i>
+								</div>
+								<span class="eco-text">Implementación<br>y migración</span>
+							</div>
+							<div class="eco-item eco-item-2">
+								<div class="eco-icon">
+									<i class="fas fa-graduation-cap"></i>
+								</div>
+								<span class="eco-text">Entrenamiento<br>del personal</span>
+							</div>
+							<div class="eco-item eco-item-3">
+								<div class="eco-icon">
+									<i class="fas fa-headset"></i>
+								</div>
+								<span class="eco-text">Soporte técnico<br>especializado</span>
+							</div>
+							<div class="eco-item eco-item-4">
+								<div class="eco-icon">
+									<i class="fas fa-puzzle-piece"></i>
+								</div>
+								<span class="eco-text">Funcionalidades<br>personalizadas</span>
+							</div>
+							<div class="eco-item eco-item-5">
+								<div class="eco-icon">
+									<i class="fas fa-th-large"></i>
+								</div>
+								<span class="eco-text">Los Módulos<br>que necesites</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+section.hero-modulos {
+	position: relative;
+	background: linear-gradient(135deg, #f8f9fa 0%, rgba(76, 175, 80, 0.08) 50%, rgba(0, 212, 170, 0.05) 100%) !important;
+	background-color: #f8f9fa !important;
+	overflow: hidden;
+	min-height: 100vh;
+}
+
+/* Forzar el fondo con especificidad adicional */
+.hero-modulos.is-fullheight-with-navbar {
+	background: linear-gradient(135deg, #f8f9fa 0%, rgba(76, 175, 80, 0.08) 50%, rgba(0, 212, 170, 0.05) 100%) !important;
+}
+
+
+
+.hero-body {
+	padding: 4rem 1.5rem 4rem 1.5rem;
+	position: relative;
+	z-index: 1;
+}
+
+.hero-content {
+	animation: slideInUp 1s ease-out;
+	color: #1A1A1A;
+}
+
+
+
+.hero-title {
+	font-size: 4rem;
+	font-weight: 900;
+	line-height: 1.1;
+	margin-bottom: 1.5rem;
+	animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.title-highlight {
+	display: block;
+	color: #1A1A1A;
+}
+
+.title-main {
+	display: block;
+	color: #1A1A1A;
+}
+
+.hero-subtitle {
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: #4CAF50;
+	margin-bottom: 2rem;
+	letter-spacing: 1px;
+	animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.hero-description {
+	font-size: 1.25rem;
+	line-height: 1.6;
+	color: #4a6785;
+	margin-bottom: 3rem;
+	animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+
+
+.ecosystem-visual {
+	position: relative;
+	height: 500px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	animation: fadeIn 1.5s ease-out 0.8s both;
+}
+
+.ecosystem-center {
+	position: absolute;
+	z-index: 2;
+}
+
+.center-circle {
+	width: 180px;
+	height: 180px;
+	border-radius: 50%;
+	background: #C9A43D;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+	border: 2px solid rgba(255, 255, 255, 0.2);
+	position: relative;
+}
+
+
+
+.center-icon {
+	font-size: 2rem;
+	color: white;
+	margin-bottom: 0.5rem;
+	z-index: 1;
+}
+
+.center-title {
+	font-size: 1.5rem;
+	color: white;
+	font-weight: 800;
+	margin-bottom: 0.25rem;
+	z-index: 1;
+}
+
+.center-subtitle {
+	font-size: 1rem;
+	color: rgba(255, 255, 255, 0.8);
+	z-index: 1;
+}
+
+.ecosystem-items {
+	position: relative;
+	width: 500px;
+	height: 500px;
+}
+
+.eco-item {
+	position: absolute;
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.8);
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(76, 175, 80, 0.3);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: #1A1A1A;
+	font-size: 0.8rem;
+	text-align: center;
+	opacity: 1;
+}
+
+
+
+.eco-icon {
+	font-size: 1.5rem;
+	margin-bottom: 0.5rem;
+	color: #C9A43D;
+}
+
+.eco-text {
+	font-weight: 400;
+	line-height: 1.2;
+}
+
+/* Animaciones para efectos hover */
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes fadeInDown {
+	from {
+		opacity: 0;
+		transform: translateY(-30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes slideInUp {
+	from {
+		opacity: 0;
+		transform: translateY(50px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+
+
+/* Posicionamiento en forma de estrella alrededor del círculo central */
+.eco-item-1 { 
+	top: 5%; 
+	left: 50%; 
+	margin-left: -60px;
+}
+
+.eco-item-2 { 
+	top: 20%; 
+	right: 10%; 
+}
+
+.eco-item-3 { 
+	bottom: 18%; 
+	right: 12%; 
+}
+
+.eco-item-4 { 
+	bottom: 18%; 
+	left: 12%; 
+}
+
+.eco-item-5 { 
+	top: 20%; 
+	left: 10%; 
+}
+
+@media (max-width: 768px) {
+	.hero-body {
+		padding: 2rem 1rem;
+	}
+	
+	.columns {
+		flex-direction: column;
+	}
+	
+	.hero-title {
+		font-size: 2.5rem;
+	}
+	
+	.hero-subtitle {
+		font-size: 1.2rem;
+	}
+	
+	.hero-description {
+		font-size: 1.1rem;
+		margin-bottom: 2rem;
+	}
+	
+	.hero-actions {
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	.hero-cta, .hero-cta-secondary {
+		width: 100%;
+		max-width: 300px;
+	}
+	
+	.ecosystem-visual {
+		height: 350px;
+		margin-top: 3rem;
+	}
+	
+	.ecosystem-items {
+		width: 320px;
+		height: 320px;
+	}
+	
+	.center-circle {
+		width: 100px;
+		height: 100px;
+	}
+	
+	.center-icon {
+		font-size: 1.5rem;
+	}
+	
+	.center-title {
+		font-size: 1.2rem;
+	}
+	
+	.center-subtitle {
+		font-size: 0.8rem;
+	}
+	
+	.eco-item {
+		width: 70px;
+		height: 70px;
+		font-size: 0.6rem;
+	}
+	
+	.eco-icon {
+		font-size: 1rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.hero-title {
+		font-size: 2rem;
+	}
+	
+	.hero-subtitle {
+		font-size: 1rem;
+	}
+	
+	.hero-description {
+		font-size: 1rem;
+	}
+	
+	.ecosystem-visual {
+		height: 300px;
+		margin-top: 2rem;
+	}
+	
+	.ecosystem-items {
+		width: 280px;
+		height: 280px;
+	}
+	
+	.center-circle {
+		width: 80px;
+		height: 80px;
+	}
+	
+	.center-icon {
+		font-size: 1.2rem;
+	}
+	
+	.center-title {
+		font-size: 1rem;
+	}
+	
+	.center-subtitle {
+		font-size: 0.7rem;
+	}
+	
+	.eco-item {
+		width: 60px;
+		height: 60px;
+		font-size: 0.5rem;
+	}
+	
+	.eco-icon {
+		font-size: 0.9rem;
+	}
+}
+</style> 

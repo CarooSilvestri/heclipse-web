@@ -1,0 +1,478 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Contact from "../components/shared/Contact.astro";
+import backgroundImg from "../assets/buen-ambiente-de-trabajo.jpg";
+
+const valores = [
+	{
+		icon: "fas fa-heart",
+		title: "Compromiso con la Salud",
+		description: "Entendemos la importancia de la salud y trabajamos para mejorar la atención médica a través de la tecnología."
+	},
+	{
+		icon: "fas fa-users",
+		title: "Enfoque Humano",
+		description: "Detrás de cada línea de código hay personas que buscan hacer la diferencia en la vida de otros."
+	},
+	{
+		icon: "fas fa-lightbulb",
+		title: "Innovación Constante",
+		description: "Nos mantenemos a la vanguardia tecnológica para ofrecer las mejores soluciones del mercado."
+	},
+	{
+		icon: "fas fa-handshake",
+		title: "Confianza y Transparencia",
+		description: "Construimos relaciones duraderas basadas en la confianza mutua y la comunicación abierta."
+	}
+];
+
+const enfoqueItems = [
+	{
+		icon: "fas fa-robot",
+		title: "Automatizado",
+		description: "Sin intervención manual, desde el ingreso del paciente hasta el reporte contable."
+	},
+	{
+		icon: "fas fa-lightbulb",
+		title: "Intuitivo",
+		description: "Sistema tipo \"carrito de compras\" para facturación rápida y precisa."
+	},
+	{
+		icon: "fas fa-search",
+		title: "Auditable",
+		description: "Registro de cada acción del usuario, dispositivo y tiempo de uso."
+	},
+	{
+		icon: "fas fa-expand-arrows-alt",
+		title: "Escalable",
+		description: "Desde clínicas chicas hasta hospitales complejos."
+	}
+];
+
+
+---
+
+<Layout>
+	<main>
+		<!-- Hero Section -->
+		<section class="hero is-medium nosotros-hero" style={`background: #4CAF50 url(${backgroundImg.src}) center/cover no-repeat;`}>
+			<div class="hero-overlay"></div>
+			<div class="hero-body">
+				<div class="container">
+					<div class="has-text-centered">
+						<h1 class="title is-1 has-text-white mb-4">
+							Nosotros
+						</h1>
+						<p class="subtitle is-4 has-text-white">
+							Conocé la historia y los valores que nos impulsan
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Historia -->
+		<section class="section">
+			<div class="container">
+				<div class="columns is-vcentered">
+					<div class="column is-6">
+						<h2 class="title is-2 mb-4">
+							<span class="title-dark">Nuestra</span> <span class="title-highlight">Historia</span>
+						</h2>
+						<div class="content is-medium">
+							<p>
+								<span class="highlight-text">Heclipse</span> nació de la necesidad de modernizar y simplificar la gestión de centros de salud en Argentina. 
+								Desde nuestros inicios, evolucionamos e incrementamos la eficiencia de los procesos gracias a nuestra experiencia 
+								en soluciones y a la evolución tecnológica que nos permite estar siempre a la vanguardia.
+							</p>
+							<p>
+								Con más de <span class="highlight-text">25.000 horas de desarrollo</span> y el feedback constante de técnicos, médicos y administradores, 
+								hemos creado una plataforma que realmente entiende las necesidades del sector salud.
+							</p>
+							<p>
+								Nuestro compromiso es brindar <span class="highlight-text">atención personalizada y tecnología de punta</span>, 
+								ofreciendo soluciones a la medida de cada cliente, sin moldes predefinidos.
+							</p>
+						</div>
+					</div>
+					<div class="column is-6">
+						<figure class="image historia-image">
+							<img 
+								src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=900&q=80" 
+								alt="Médico profesional con estetoscopio"
+								class="historia-img"
+							/>
+						</figure>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Valores -->
+		<section class="section has-background-light">
+			<div class="container">
+				<div class="has-text-centered mb-6">
+					<h2 class="title is-2 mb-4">
+						<span class="title-dark">Nuestros</span> <span class="title-highlight">Valores</span>
+					</h2>
+					<p class="subtitle is-5 has-text-grey-dark">
+						Los principios que guían nuestro trabajo diario
+					</p>
+				</div>
+
+				<div class="valores-grid">
+					{valores.map((valor, index) => (
+						<div class="valor-card" data-aos="fade-up" data-aos-delay={index * 100}>
+							<div class="valor-icon">
+								<i class={valor.icon}></i>
+							</div>
+							<div class="valor-content">
+								<h3 class="valor-title">{valor.title}</h3>
+								<p class="valor-description">{valor.description}</p>
+							</div>
+						</div>
+					))}
+				</div>
+			</div>
+		</section>
+
+		<!-- Nuestro Enfoque -->
+		<section class="section" id="enfoque" data-aos="fade-up">
+			<div class="container">
+				<div class="has-text-centered mb-6">
+					<h2 class="title is-2 mb-4">
+						<span class="title-dark">Nuestro</span> <span class="title-highlight">Enfoque</span>
+					</h2>
+					<p class="subtitle is-5 has-text-grey-dark">
+						Principios que guían el desarrollo de nuestra plataforma
+					</p>
+				</div>
+
+				<div class="enfoque-grid">
+					{enfoqueItems.map((item, index) => (
+						<div class="enfoque-card" data-aos="zoom-in" data-aos-delay={index * 100}>
+							<div class="enfoque-icon">
+								<i class={item.icon}></i>
+							</div>
+							<h3 class="enfoque-title">{item.title}</h3>
+							<p class="enfoque-description">{item.description}</p>
+						</div>
+					))}
+				</div>
+			</div>
+		</section>
+
+		<!-- Contact Section -->
+		<Contact />
+	</main>
+</Layout>
+
+<style>
+	/* Nosotros Hero */
+	.nosotros-hero {
+		position: relative;
+		min-height: 60vh;
+		display: flex;
+		align-items: center;
+	}
+
+	.hero-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: rgba(46, 125, 50, 0.8);
+		z-index: 1;
+	}
+
+	.nosotros-hero .hero-body {
+		position: relative;
+		z-index: 2;
+		padding: 3rem 1.5rem;
+		display: flex;
+		align-items: center;
+		min-height: 60vh;
+	}
+
+	.nosotros-hero .container {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.nosotros-hero .title,
+	.nosotros-hero .subtitle {
+		font-weight: 700;
+	}
+
+	.nosotros-hero .title {
+		font-size: 3.5rem;
+		margin-bottom: 1rem;
+	}
+
+	.nosotros-hero .subtitle {
+		font-size: 1.5rem;
+		opacity: 0.95;
+	}
+
+	/* Historia */
+	.highlight-text {
+		color: var(--secondary);
+		font-weight: 600;
+	}
+
+	.title-highlight {
+		background: var(--secondary);
+		color: white;
+		font-weight: 700;
+		padding: 0.2rem 0.6rem;
+		border-radius: 8px;
+		display: inline-block;
+	}
+
+	.title-dark {
+		color: var(--text-dark);
+	}
+
+	.historia-image {
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding-left: 2rem;
+	}
+
+	.historia-img {
+		width: 100%;
+		height: 500px;
+		object-fit: cover;
+		border-radius: var(--border-radius-lg);
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+	}
+
+	/* Valores */
+	.valores-grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 2rem;
+		margin-top: 3rem;
+	}
+
+	.valor-card {
+		background: var(--bg-white);
+		border-radius: var(--border-radius-lg);
+		padding: 2rem;
+		display: flex;
+		align-items: flex-start;
+		gap: 1.5rem;
+		transition: var(--transition-base);
+		border: 1px solid var(--border-light);
+		box-shadow: 0 2px 8px var(--shadow-color);
+	}
+
+	.valor-card:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 12px 30px var(--shadow-color);
+	}
+
+	.valor-icon {
+		width: 70px;
+		height: 70px;
+		background: var(--primary-bg-light);
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: var(--primary);
+		font-size: 1.8rem;
+		transition: var(--transition-base);
+		flex-shrink: 0;
+	}
+
+	.valor-card:hover .valor-icon {
+		background: var(--primary);
+		color: white;
+		transform: scale(1.1);
+	}
+
+	.valor-content {
+		flex: 1;
+	}
+
+	.valor-title {
+		font-size: 1.2rem;
+		font-weight: 600;
+		color: var(--text-dark);
+		margin-bottom: 0.5rem;
+		line-height: 1.3;
+	}
+
+	.valor-description {
+		color: var(--text-light);
+		line-height: 1.6;
+		margin: 0;
+		font-size: 0.95rem;
+	}
+
+	/* Enfoque */
+	.enfoque-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+		margin-top: 3rem;
+	}
+
+	.enfoque-card {
+		background: var(--bg-white);
+		border-radius: var(--border-radius-lg);
+		padding: 2.5rem 2rem;
+		text-align: center;
+		transition: var(--transition-base);
+		border: 1px solid var(--border-light);
+		box-shadow: 0 2px 8px var(--shadow-color);
+		position: relative;
+		overflow: hidden;
+	}
+
+	.enfoque-card::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 4px;
+		background: linear-gradient(90deg, var(--primary), var(--secondary));
+		transform: scaleX(0);
+		transform-origin: left;
+		transition: transform 0.3s ease;
+	}
+
+	.enfoque-card:hover {
+		transform: translateY(-8px);
+		box-shadow: 0 12px 30px var(--shadow-color);
+	}
+
+	.enfoque-card:hover::before {
+		transform: scaleX(1);
+	}
+
+	.enfoque-icon {
+		width: 80px;
+		height: 80px;
+		background: var(--primary-bg-light);
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0 auto 1.5rem;
+		color: var(--primary);
+		font-size: 2rem;
+		transition: var(--transition-base);
+	}
+
+	.enfoque-card:hover .enfoque-icon {
+		background: var(--primary);
+		color: white;
+		transform: scale(1.1);
+	}
+
+	.enfoque-title {
+		font-size: 1.3rem;
+		font-weight: 600;
+		color: var(--text-dark);
+		margin-bottom: 1rem;
+	}
+
+	.enfoque-description {
+		color: var(--text-light);
+		line-height: 1.6;
+		margin: 0;
+	}
+
+	@media (max-width: 768px) {
+		.nosotros-hero .hero-body {
+			padding: 2.5rem 1.5rem;
+			min-height: 50vh;
+		}
+
+		.nosotros-hero .title {
+			font-size: 2.5rem;
+		}
+
+		.nosotros-hero .subtitle {
+			font-size: 1.2rem;
+		}
+
+		.valores-grid {
+			grid-template-columns: 1fr;
+			gap: 1.5rem;
+		}
+
+		.valor-card {
+			padding: 1.5rem;
+			flex-direction: column;
+			text-align: center;
+		}
+
+		.valor-icon {
+			width: 60px;
+			height: 60px;
+			font-size: 1.5rem;
+			margin: 0 auto 1rem;
+		}
+
+		.valor-content {
+			text-align: center;
+		}
+
+		.equipo-grid {
+			grid-template-columns: 1fr;
+			gap: 1.5rem;
+		}
+
+		.equipo-card {
+			padding: 1.5rem;
+		}
+
+		.equipo-icon {
+			width: 60px;
+			height: 60px;
+			font-size: 1.5rem;
+		}
+
+		.enfoque-grid {
+			grid-template-columns: 1fr;
+			gap: 1.5rem;
+		}
+
+		.enfoque-card {
+			padding: 2rem 1.5rem;
+		}
+
+		.historia-img {
+			height: 300px;
+		}
+
+		.historia-image {
+			padding-left: 0;
+			margin-top: 2rem;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.nosotros-hero .hero-body {
+			padding: 2rem 1rem;
+			min-height: 45vh;
+		}
+
+		.nosotros-hero .title {
+			font-size: 2rem;
+		}
+
+		.nosotros-hero .subtitle {
+			font-size: 1.1rem;
+		}
+	}
+</style> 
