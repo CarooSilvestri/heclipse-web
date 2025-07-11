@@ -178,11 +178,6 @@ const solutionAreas = [
 			flex-direction: column;
 		}
 
-		.solution-card {
-			padding: 2rem 1.5rem;
-			margin-bottom: 1rem;
-		}
-
 		.solution-icon {
 			width: 60px;
 			height: 60px;
@@ -204,9 +199,13 @@ const solutionAreas = [
 	}
 
 	@media (max-width: 480px) {
+		.columns {
+			gap: 0.5rem !important;
+		}
+
 		.solution-card {
 			padding: 1.5rem 1rem;
-			margin-bottom: 0.75rem;
+			margin-bottom: 0;
 		}
 
 		.solution-icon {

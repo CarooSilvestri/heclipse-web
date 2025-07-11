@@ -310,15 +310,18 @@ section.hero-modulos {
 	
 	.hero-title {
 		font-size: 2.5rem;
+		text-align: center;
 	}
 	
 	.hero-subtitle {
 		font-size: 1.2rem;
+		text-align: center;
 	}
 	
 	.hero-description {
 		font-size: 1.1rem;
-		margin-bottom: 2rem;
+		margin-bottom: 0.5rem;
+		text-align: center;
 	}
 	
 	.hero-actions {
@@ -332,18 +335,100 @@ section.hero-modulos {
 	}
 	
 	.ecosystem-visual {
-		height: 350px;
-		margin-top: 3rem;
+		height: 480px;
+		margin-top: 0.5rem;
 	}
 	
 	.ecosystem-items {
-		width: 320px;
-		height: 320px;
+		width: 450px;
+		height: 450px;
 	}
 	
 	.center-circle {
-		width: 100px;
-		height: 100px;
+		width: 140px;
+		height: 140px;
+	}
+	
+	.center-icon {
+		font-size: 1.8rem;
+	}
+	
+	.center-title {
+		font-size: 1.4rem;
+	}
+	
+	.center-subtitle {
+		font-size: 1rem;
+	}
+	
+	.eco-item {
+		width: 130px;
+		height: 130px;
+		font-size: 0.9rem;
+	}
+	
+	.eco-icon {
+		font-size: 1.6rem;
+	}
+	
+	/* Ajustar posicionamiento para burbujas más grandes en mobile */
+	.eco-item-1 { 
+		top: 2%; 
+		left: 50%; 
+		margin-left: -65px;
+	}
+	
+	.eco-item-2 { 
+		top: 18%; 
+		right: 1%; 
+	}
+	
+	.eco-item-3 { 
+		bottom: 10%; 
+		right: 6%; 
+	}
+	
+	.eco-item-4 { 
+		bottom: 10%; 
+		left: 6%; 
+	}
+	
+	.eco-item-5 { 
+		top: 18%; 
+		left: 1%; 
+	}
+}
+
+@media (max-width: 480px) {
+	.hero-title {
+		font-size: 2rem;
+		text-align: center;
+	}
+	
+	.hero-subtitle {
+		font-size: 1rem;
+		text-align: center;
+	}
+	
+	.hero-description {
+		font-size: 1rem;
+		text-align: center;
+		margin-bottom: 0.25rem;
+	}
+	
+	.ecosystem-visual {
+		height: 420px;
+		margin-top: 0.25rem;
+	}
+	
+	.ecosystem-items {
+		width: 380px;
+		height: 380px;
+	}
+	
+	.center-circle {
+		width: 120px;
+		height: 120px;
 	}
 	
 	.center-icon {
@@ -355,68 +440,44 @@ section.hero-modulos {
 	}
 	
 	.center-subtitle {
+		font-size: 0.9rem;
+	}
+	
+	.eco-item {
+		width: 115px;
+		height: 115px;
 		font-size: 0.8rem;
 	}
 	
-	.eco-item {
-		width: 70px;
-		height: 70px;
-		font-size: 0.6rem;
-	}
-	
 	.eco-icon {
-		font-size: 1rem;
-	}
-}
-
-@media (max-width: 480px) {
-	.hero-title {
-		font-size: 2rem;
+		font-size: 1.4rem;
 	}
 	
-	.hero-subtitle {
-		font-size: 1rem;
+	/* Ajustar posicionamiento para burbujas más grandes en mobile pequeño */
+	.eco-item-1 { 
+		top: 3%; 
+		left: 50%; 
+		margin-left: -57.5px;
 	}
 	
-	.hero-description {
-		font-size: 1rem;
+	.eco-item-2 { 
+		top: 20%; 
+		right: -1%; 
 	}
 	
-	.ecosystem-visual {
-		height: 300px;
-		margin-top: 2rem;
+	.eco-item-3 { 
+		bottom: 12%; 
+		right: 4%; 
 	}
 	
-	.ecosystem-items {
-		width: 280px;
-		height: 280px;
+	.eco-item-4 { 
+		bottom: 12%; 
+		left: 4%; 
 	}
 	
-	.center-circle {
-		width: 80px;
-		height: 80px;
-	}
-	
-	.center-icon {
-		font-size: 1.2rem;
-	}
-	
-	.center-title {
-		font-size: 1rem;
-	}
-	
-	.center-subtitle {
-		font-size: 0.7rem;
-	}
-	
-	.eco-item {
-		width: 60px;
-		height: 60px;
-		font-size: 0.5rem;
-	}
-	
-	.eco-icon {
-		font-size: 0.9rem;
+	.eco-item-5 { 
+		top: 20%; 
+		left: -1%; 
 	}
 }
 </style> 

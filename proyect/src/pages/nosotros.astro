@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Contact from "../components/shared/Contact.astro";
 import backgroundImg from "../assets/buen-ambiente-de-trabajo.jpg";
+import historiaImg from "../assets/como-escribir-web-sobre-nosotros.jpg";
 
 const valores = [
 	{
@@ -98,8 +99,8 @@ const enfoqueItems = [
 					<div class="column is-6">
 						<figure class="image historia-image">
 							<img 
-								src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=900&q=80" 
-								alt="Médico profesional con estetoscopio"
+								src={historiaImg.src} 
+								alt="Profesionales de la salud en reunión de trabajo"
 								class="historia-img"
 							/>
 						</figure>
