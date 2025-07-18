@@ -10,7 +10,7 @@ import gestionImg from '../../assets/gestion-administrativa.png';
 				<div class="column is-6">
 					<div class="hero-content">
 						<h1 class="title is-1" data-aos="fade-up" data-aos-delay="100">
-							<span class="brand-name">HECLIPSE</span>, donde la salud y el software se entienden.
+							<span class="brand-name">HECLIPSE</span>, donde la salud y el software se entienden
 						</h1>
 						<h2 class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
 							Software de Gestión Inteligente para tu empresa de salud
@@ -273,18 +273,20 @@ import gestionImg from '../../assets/gestion-administrativa.png';
 		}
 
 		.title {
-			font-size: 2.4rem;
-			margin-bottom: 1.2rem;
+			font-size: 2.2rem;
+			margin-bottom: 1.5rem;
+			line-height: 1.2;
 		}
 
 		.hero-subtitle {
-			font-size: 1.2rem;
+			font-size: 1.15rem;
 			margin-bottom: 1.5rem;
 		}
 
 		.hero-description {
-			font-size: 1.1rem;
+			font-size: 1rem;
 			margin-bottom: 2rem;
+			text-align: center;
 		}
 
 		.email-form {
@@ -296,20 +298,22 @@ import gestionImg from '../../assets/gestion-administrativa.png';
 			border-radius: 50px;
 			padding: 4px;
 			gap: 0;
+			max-width: 100%;
 		}
 
 		.submit-button {
 			margin-top: 0;
 			border-radius: 46px;
-			padding: 0.9rem 1.2rem;
-			font-size: 0.85rem;
+			padding: 1rem 1.5rem;
+			font-size: 0.9rem;
 			white-space: nowrap;
+			min-width: auto;
 		}
 
 		.email-input {
-			padding: 1rem 1rem;
+			padding: 1rem 1.25rem;
 			text-align: left;
-			font-size: 0.9rem;
+			font-size: 0.95rem;
 		}
 
 		.hero-image-wrapper {
@@ -319,7 +323,7 @@ import gestionImg from '../../assets/gestion-administrativa.png';
 
 		.hero-image {
 			width: 100%;
-			height: 300px;
+			height: 350px;
 			border-radius: 15px;
 			object-fit: cover;
 		}
@@ -331,51 +335,98 @@ import gestionImg from '../../assets/gestion-administrativa.png';
 		}
 
 		.title {
-			font-size: 2rem;
-			margin-bottom: 1rem;
+			font-size: 1.8rem;
+			margin-bottom: 1.2rem;
+			line-height: 1.25;
 		}
 
 		.hero-subtitle {
-			font-size: 1.1rem;
-			margin-bottom: 1.25rem;
+			font-size: 1rem;
+			margin-bottom: 1.2rem;
 		}
 		
 		.hero-description {
-			font-size: 1rem;
-			margin-bottom: 1.5rem;
+			font-size: 0.95rem;
+			margin-bottom: 1.8rem;
+			line-height: 1.6;
 		}
 
 		.hero-content {
 			padding-top: 1.5rem;
+			padding-left: 1rem;
+			padding-right: 1rem;
 		}
 
 		.form-container {
-			flex-direction: column;
-			border-radius: 24px;
-			padding: 6px;
-			gap: 6px;
+			flex-direction: row;
+			border-radius: 50px;
+			padding: 4px;
+			gap: 0;
+			margin: 0 auto;
+			max-width: 100%;
 		}
 
 		.submit-button {
-			border-radius: 20px;
-			padding: 1rem 1.5rem;
-			font-size: 0.95rem;
+			border-radius: 46px;
+			padding: 0.9rem 1.2rem;
+			font-size: 0.85rem;
 			margin-top: 0;
+			white-space: nowrap;
 		}
 
 		.email-input {
-			padding: 1rem 1.25rem;
-			text-align: center;
-			font-size: 1rem;
+			padding: 0.9rem 1rem;
+			text-align: left;
+			font-size: 0.9rem;
 		}
 
 		.hero-image {
-			height: 250px;
+			height: 280px;
 			border-radius: 12px;
 		}
 
 		.hero-image-wrapper {
 			margin-bottom: 1.5rem;
+		}
+	}
+
+	@media screen and (max-width: 360px) {
+		.title {
+			font-size: 1.6rem;
+			margin-bottom: 1rem;
+		}
+
+		.hero-subtitle {
+			font-size: 0.95rem;
+			margin-bottom: 1rem;
+		}
+
+		.hero-description {
+			font-size: 0.9rem;
+			margin-bottom: 1.5rem;
+		}
+
+		.hero-content {
+			padding-left: 0.5rem;
+			padding-right: 0.5rem;
+		}
+
+		.form-container {
+			margin: 0;
+		}
+
+		.submit-button {
+			padding: 0.8rem 1rem;
+			font-size: 0.8rem;
+		}
+
+		.email-input {
+			padding: 0.8rem 0.9rem;
+			font-size: 0.85rem;
+		}
+
+		.hero-image {
+			height: 250px;
 		}
 	}
 

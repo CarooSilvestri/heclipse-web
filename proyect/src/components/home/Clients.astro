@@ -1,36 +1,39 @@
 ---
 import diagnosticImage from '../../assets/DiagnosticImaging.jpg';
+import sanatoriosImg from '../../assets/select_pills_img/sanatorios.jpeg';
+import centrosImagenesImg from '../../assets/select_pills_img/centros_imagenes.jpeg';
+import hospitalesImg from '../../assets/select_pills_img/hospitales.jpeg';
+import camarasColegiosImg from '../../assets/select_pills_img/camaras_colegios.jpeg';
 
 const clients = [
 	{ 
 		name: "Sanatorios y Clínicas",
 		active: true,
 		description: "Gestionás consultorios, turnos, farmacia, laboratorio e internación con un flujo de trabajo integrado que mejora la atención y optimiza los recursos.",
-		image: "https://images.unsplash.com/photo-1571772996211-2f02c9727629?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600"
+		image: sanatoriosImg.src
 	},
 	{ 
 		name: "Centros de diagnóstico por imágenes",
 		active: false,
 		description: "Administrás agendas, equipos, estudios, informes y facturación a obras sociales desde una plataforma centralizada y ágil.",
-		image: diagnosticImage.src
+		image: centrosImagenesImg.src
 	},
 	{ 
 		name: "Hospitales",
 		active: false,
 		description: "Controlás todo el circuito operativo: admisión, guardia, quirófano, camas, contabilidad y RR.HH., con trazabilidad completa y en tiempo real.",
-		image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600"
+		image: hospitalesImg.src
 	},
 	{ 
 		name: "Colegios médicos/Cámaras de Salud",
 		active: false,
 		description: "Manejás matrículas, cuotas, capacitaciones y certificaciones, centralizando la gestión institucional y la relación con los profesionales.",
-		image: "https://images.unsplash.com/photo-1638202993928-7267aad84c31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600"
+		image: camarasColegiosImg.src
 	}
 ];
 
 const heroContent = {
-	title: "Instituciones que confían en nuestra tecnología",
-	subtitle: "Ellos ya confiaron. Vos también podés."
+	title: "Instituciones que confían en nuestra tecnología"
 };
 ---
 
@@ -40,9 +43,6 @@ const heroContent = {
 		<div class="hero-content">
 			<!-- Main Title -->
 			<h1 class="hero-title">{heroContent.title}</h1>
-			
-			<!-- Subtitle -->
-			<p class="hero-subtitle">{heroContent.subtitle}</p>
 
 			<!-- Client Pills -->
 			<div class="client-pills">
@@ -141,15 +141,14 @@ const heroContent = {
 		cursor: pointer;
 	}
 
-	.client-pill.active {
-		background: var(--secondary);
-		border-color: var(--secondary);
-		color: white;
-		transform: scale(1.05);
+	.client-pills .client-pill.active {
+		background: var(--secondary-dark) !important;
+		border-color: var(--secondary-dark) !important;
+		color: white !important;
 		box-shadow: 0 4px 15px rgba(201, 164, 61, 0.3);
 	}
 
-	.client-pill:hover {
+	.client-pill:hover:not(.active) {
 		background: rgba(198, 139, 46, 0.3);
 		border-color: rgba(198, 139, 46, 0.6);
 		transform: scale(1.02);
