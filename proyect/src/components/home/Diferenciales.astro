@@ -25,11 +25,6 @@ const diferenciales = [
 	}
 ];
 
-const sectionContent = {
-	title: "Cómo lo Hacemos Diferente",
-	subtitle: "Nuestro enfoque único en el mercado",
-	description: "Características distintivas que garantizan el mejor valor y experiencia para tu institución médica."
-};
 ---
 
 <section class="diferenciales-section" id="diferenciales" data-aos="fade-up">
@@ -38,9 +33,9 @@ const sectionContent = {
 			<h2 class="title is-2 mb-4">
 				<span class="title-dark">Nuestros</span> <span class="highlighted-word">Diferenciales</span>
 			</h2>
-			<p class="subtitle is-5 has-text-grey-dark mb-5">
-				{sectionContent.subtitle}
-			</p>
+			<span class="subtitle is-5 has-text-grey-dark mb-5 p-0">
+				Nuestro enfoque único en el mercado
+			</span>
 		</div>
 
 		<div class="columns is-vcentered">
@@ -91,7 +86,6 @@ const sectionContent = {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		padding: 1rem;
 	}
 
 	.diferencial-image {
@@ -112,8 +106,6 @@ const sectionContent = {
 		align-items: flex-start;
 		margin-bottom: 1.8rem;
 		padding: 0;
-		background: transparent;
-		border: none;
 		transition: all 0.3s ease;
 	}
 
@@ -159,7 +151,6 @@ const sectionContent = {
 		color: var(--text-light);
 		line-height: 1.4;
 		margin: 0;
-		flex-grow: 1;
 	}
 
 	/* Efectos de resaltado */
@@ -182,11 +173,6 @@ const sectionContent = {
 		.columns {
 			display: flex;
 			flex-direction: column;
-		}
-
-		.image-container {
-			padding: 1rem;
-			margin-bottom: 2rem;
 		}
 
 		.diferencial-image {
@@ -220,33 +206,34 @@ const sectionContent = {
 	}
 
 	@media screen and (max-width: 480px) {
+		.diferenciales-section {
+			padding: 3rem 0.8rem;
+		}
+
 		.diferencial-item {
-			padding: 1rem;
-			flex-direction: column;
-			text-align: center;
-			align-items: center;
+			flex-direction: row;
+			text-align: left;
+			align-items: flex-start;
+			margin-bottom: 0.5rem;
+			padding: 0.5rem;
 		}
 
 		.diferencial-icon {
-			margin-right: 0;
-			margin-bottom: 1rem;
-			width: 40px;
-			height: 40px;
-			font-size: 1.3rem;
-			align-self: center;
-		}
-
-		.diferencial-content {
-			text-align: center;
-			align-items: center;
+			margin-right: 0.75rem;
+			margin-bottom: 0;
+			width: 35px;
+			height: 35px;
+			font-size: 1.1rem;
+			align-self: flex-start;
 		}
 
 		.diferencial-title {
-			font-size: 1rem;
+			font-size: 0.95rem;
+			margin-bottom: 0.2rem;
 		}
 
 		.diferencial-description {
-			font-size: 0.85rem;
+			font-size: 0.8rem;
 		}
 	}
 </style> 

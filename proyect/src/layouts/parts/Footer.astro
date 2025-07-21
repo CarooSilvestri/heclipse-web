@@ -1,7 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import logo from "../../assets/logo.png";
-import logoCompleto from "../../assets/logo_completo.png";
+import logoCompleto from "../../assets/SLOGAN HECLIPSE.png";
 
 const currentYear = new Date().getFullYear();
 
@@ -16,7 +15,7 @@ const siteMap = [
 	{ text: "Módulos", href: "/modulos" },
 	{ text: "¿Por qué Heclipse?", href: "/porque-heclipse" },
 	{ text: "Nosotros", href: "/nosotros" },
-	{ text: "Contacto", href: "#contacto" },
+	{ text: "Contacto", href: "/contacto" },
 ];
 ---
 
@@ -28,14 +27,9 @@ const siteMap = [
 					<Image
 						src={logoCompleto}
 						alt="Logo"
-						width={160}
+						width={300}
 						height={40}
-						class="mb-4"
 					/>
-					<p class="has-text-grey">
-						Soluciones tecnológicas para el sector salud, <br />
-						diseñadas para hacer tu trabajo más eficiente.
-					</p>
 				</div>
 			</div>
 

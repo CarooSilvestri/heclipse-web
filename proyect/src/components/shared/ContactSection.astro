@@ -1,40 +1,24 @@
 ---
 // src/components/Contact.astro
-const contactInfo = [
-	{
-		type: "email",
-		title: "Email",
-		value: "info@heclipse.com.ar",
-		icon: "fas fa-envelope",
-		href: "mailto:info@heclipse.com.ar"
-	},
-	{
-		type: "whatsapp",
-		title: "WhatsApp",
-		value: "+54 9 3886 82-8566",
-		icon: "fab fa-whatsapp",
-		href: "https://wa.me/5493886828566"
-	}
-];
 ---
 
 <section class="section cta-section" id="contacto" data-aos="fade-up">
 	<div class="container">
-		<!-- Encabezado CTA -->
-		<div class="cta-content">
-			<h2 class="cta-title">
-				¿Listo para transformar <br/> la gestión de tu empresa?
-			</h2>
-			<p class="cta-subtitle">
-				Contactanos hoy mismo y descubrí todo lo que podemos hacer por vos. <br/>
-				 Te acompañamos paso a paso para evaluar juntos el sistema.
-			</p>
-		</div>
+		<div class="two-column-layout">
+			<!-- Columna izquierda - Texto -->
+			<div class="content-column">
+				<h2 class="cta-title">
+					¿Listo para transformar <br/> la gestión de tu empresa?
+				</h2>
+				<p class="cta-subtitle">
+					Contactanos hoy mismo y descubrí todo lo que podemos hacer por vos. <br/>
+					 Te acompañamos paso a paso para evaluar juntos el sistema.
+				</p>
+			</div>
 
-		<!-- Contacto: Formulario y Cards -->
-		<div class="contact-flex">
-			<!-- Formulario de contacto -->
-			<form class="contact-form" action="https://formsubmit.co/mcsilvestri19@gmail.com" method="POST" target="_blank">
+			<!-- Columna derecha - Formulario -->
+			<div class="form-column">
+				<form class="contact-form" action="https://formsubmit.co/mcsilvestri19@gmail.com" method="POST" target="_blank">
 				<input type="hidden" name="_captcha" value="false">
 				<input type="hidden" name="_next" value="https://heclipse.com.ar/gracias">
 				<!-- Honeypot anti-spam -->
@@ -42,40 +26,22 @@ const contactInfo = [
 					<label for="website">No completar este campo</label>
 					<input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
 				</div>
-				<div class="form-group">
-					<label for="name">Nombre</label>
-					<input type="text" id="name" name="name" required placeholder="Tu nombre" />
-				</div>
-				<div class="form-group">
+				<div class="form-row">
+					<div class="form-group">
+						<label for="name">Nombre</label>
+						<input type="text" id="name" name="name" required placeholder="Tu nombre" />
+					</div>
+					<div class="form-group">
 					<label for="email">Email</label>
 					<input type="email" id="email" name="email" required placeholder="tu@email.com" />
 				</div>
-				<div class="form-group">
-					<label for="message">Mensaje</label>
-					<textarea id="message" name="message" rows="4" required placeholder="¿En qué podemos ayudarte?"></textarea>
-				</div>
+				</div><div class="form-group">
+						<label for="message">Mensaje</label>
+						<textarea id="message" name="message" rows="4" required placeholder="¿En qué podemos ayudarte?"></textarea>
+					</div>
+				
 				<button type="submit" class="form-submit">Enviar mensaje</button>
 			</form>
-
-			<!-- Cards de contacto -->
-			<div class="contact-info-section">
-				<div class="contact-grid">
-					{contactInfo.map((contact) => (
-						<a 
-							href={contact.href} 
-							target="_blank" 
-							class={`contact-card ${contact.type === 'whatsapp' ? 'contact-card-clickable' : ''}`}
-						>
-							<div class="contact-icon">
-								<i class={contact.icon}></i>
-							</div>
-							<div class="contact-details">
-								<h4 class="contact-title">{contact.title}</h4>
-								<p class="contact-value">{contact.value}</p>
-							</div>
-						</a>
-					))}
-				</div>
 			</div>
 		</div>
 	</div>
@@ -87,6 +53,26 @@ const contactInfo = [
 		background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
 		position: relative;
 		overflow: hidden;
+	}
+	.two-column-layout {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 4rem;
+		align-items: center;
+		padding: 4rem 2rem;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.content-column {
+		padding-right: 2rem;
+	}
+
+	.form-column {
+		display: flex;
+		justify-content: center;
+		position: relative; /* Asegura que el z-index funcione */
+		z-index: 2; /* Eleva la columna del formulario sobre el fondo */
 	}
 
 	.cta-section::before {
@@ -100,13 +86,7 @@ const contactInfo = [
 		z-index: 1;
 	}
 
-	/* ===== CONTENIDO CTA ===== */
-	.cta-content {
-		position: relative;
-		z-index: 2;
-		text-align: center;
-		padding: 4rem 0 2rem;
-	}
+
 
 	.cta-title {
 		font-size: 3rem;
@@ -114,6 +94,7 @@ const contactInfo = [
 		color: white;
 		margin-bottom: 1.5rem;
 		line-height: 1.2;
+		text-align: left;
 	}
 
 	.cta-subtitle {
@@ -121,38 +102,35 @@ const contactInfo = [
 		color: rgba(255, 255, 255, 0.9);
 		margin: 0;
 		line-height: 1.5;
-		max-width: 800px;
-		margin-left: auto;
-		margin-right: auto;
+		text-align: left;
 	}
 
-	/* ===== FLEX CONTACTO ===== */
-	.contact-flex {
-		display: flex;
-		gap: 2.5rem;
-		align-items: flex-start;
+	/* ===== CONTENEDOR FORMULARIO ===== */
+	.contact-form-container {
 		justify-content: center;
 		position: relative;
 		z-index: 2;
-		max-width: 1100px;
-		margin: 0 auto;
-		flex-wrap: wrap;
+		
 	}
 
 	.contact-form {
 		background: rgba(255,255,255,0.15);
 		backdrop-filter: blur(10px);
 		border-radius: var(--border-radius-lg);
-		padding: 2rem 1.5rem;
-		box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-		min-width: 320px;
-		max-width: 370px;
-		flex: 1 1 340px;
-		display: flex;
-		flex-direction: column;
-		gap: 1.1rem;
+		padding: 2.5rem 2rem;
+		box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+		width: 100%;
+		gap: 1.5rem;
 		border: 1px solid rgba(255,255,255,0.18);
+		position: relative; /* Asegura que el z-index funcione */
+		z-index: 2; /* Eleva el formulario sobre el fondo */
 	}
+
+	.form-row {
+		display: flex;
+		gap: 1.5rem;
+	}
+
 
 	.form-group {
 		display: flex;
@@ -180,7 +158,7 @@ const contactInfo = [
 		outline: 2px solid var(--primary);
 	}
 	.form-submit {
-		background: var(--primary);
+		background: var(--secondary);
 		color: #fff;
 		border: none;
 		border-radius: 8px;
@@ -189,137 +167,102 @@ const contactInfo = [
 		font-weight: 600;
 		cursor: pointer;
 		transition: background 0.2s;
-		margin-top: 0.5rem;
+		margin-top: 1rem;
+		width: 100%;
 	}
 	.form-submit:hover {
 		background: var(--primary-dark);
 	}
 
-	/* ===== SECCIÓN CONTACTO ===== */
-	.contact-info-section {
-		position: relative;
-		z-index: 2;
-		padding: 3rem 0;
-		flex: 1 1 340px;
-		min-width: 320px;
-		max-width: 400px;
-	}
 
-	.contact-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-		gap: 2rem;
-		max-width: 800px;
-		margin: 0 auto;
-	}
-
-	/* ===== CARDS DE CONTACTO ===== */
-	.contact-card {
-		background: rgba(255, 255, 255, 0.15);
-		border-radius: var(--border-radius-lg);
-		padding: 1.5rem;
-		display: flex;
-		align-items: center;
-		gap: 1.25rem;
-		backdrop-filter: blur(10px);
-		border: 1px solid rgba(255, 255, 255, 0.2);
-		transition: all 0.3s ease;
-		text-decoration: none;
-		color: inherit;
-	}
-
-	.contact-card:hover {
-		background: rgba(255, 255, 255, 0.25);
-		transform: translateY(-5px);
-		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-		text-decoration: none;
-		color: inherit;
-	}
-
-	.contact-card-clickable:hover .contact-icon {
-		background: rgba(37, 211, 102, 0.3);
-		color: #25d366;
-		transform: scale(1.1);
-	}
-
-	/* ===== ICONOS Y CONTENIDO ===== */
-	.contact-icon {
-		width: 60px;
-		height: 60px;
-		background: rgba(255, 255, 255, 0.2);
-		border-radius: 50%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		color: white;
-		font-size: 1.5rem;
-		flex-shrink: 0;
-		transition: all 0.3s ease;
-	}
-
-	.contact-details {
-		flex: 1;
-	}
-
-	.contact-title {
-		font-size: 1.1rem;
-		font-weight: 600;
-		color: white;
-		margin-bottom: 0.25rem;
-	}
-
-	.contact-value {
-		color: rgba(255, 255, 255, 0.9);
-		margin: 0;
-		word-break: break-word;
-		font-size: 0.95rem;
-		line-height: 1.4;
-	}
 
 	/* ===== RESPONSIVE ===== */
-	@media (max-width: 900px) {
-		.contact-flex {
-			flex-direction: column;
-			gap: 2rem;
-			align-items: stretch;
-		}
-		.contact-form, .contact-info-section {
-			max-width: 100%;
-		}
-	}
 	@media (max-width: 768px) {
+		.two-column-layout {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+			padding: 1.5rem 1rem;
+		}
+
+		.content-column {
+			padding-right: 0;
+			text-align: center;
+			order: 1;
+		}
+
+		.form-column {
+			order: 2;
+		}
+
 		.cta-title {
-			font-size: 2.5rem;
+			font-size: 2.2rem;
+			text-align: center;
+			margin-bottom: 1rem;
 		}
 
 		.cta-subtitle {
-			font-size: 1.1rem;
-		}
-
-		.cta-content {
-			padding: 2.5rem 0 1.5rem;
-		}
-
-		.contact-info-section {
-			padding: 1.75rem 0;
-		}
-
-		.contact-grid {
-			grid-template-columns: 1fr;
-			gap: 1.5rem;
-		}
-
-		.contact-card {
-			padding: 1.25rem;
-			flex-direction: column;
+			font-size: 1rem;
 			text-align: center;
+			line-height: 1.6;
+		}
+
+		.contact-form {
+			padding: 1.5rem 1rem;
+			max-width: 100%;
+			width: 100%;
+			border-radius: 16px;
+		}
+
+		.form-row {
+			flex-direction: column;
 			gap: 1rem;
 		}
 
-		.contact-icon {
-			width: 50px;
-			height: 50px;
-			font-size: 1.2rem;
+		.form-group {
+			gap: 0.5rem;
+		}
+
+		.form-group input,
+		.form-group textarea {
+			padding: 0.8rem 1rem;
+			font-size: 0.95rem;
+		}
+
+		.form-submit {
+			padding: 0.9rem 1.5rem;
+			font-size: 1rem;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.two-column-layout {
+			padding: 1rem 0.5rem;
+			gap: 1.5rem;
+		}
+
+		.cta-title {
+			font-size: 1.8rem;
+			margin-bottom: 0.8rem;
+		}
+
+		.cta-subtitle {
+			font-size: 0.9rem;
+		}
+
+		.contact-form {
+			padding: 1.2rem 0.8rem;
+			border-radius: 12px;
+		}
+
+		.form-group input,
+		.form-group textarea {
+			padding: 0.7rem 0.8rem;
+			font-size: 0.9rem;
+		}
+
+		.form-submit {
+			padding: 0.8rem 1.2rem;
+			font-size: 0.95rem;
 		}
 	}
 </style>

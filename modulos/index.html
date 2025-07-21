@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no,user-scalable=no">
 	<link rel="icon" type="image/png" href="../_astro/logo.Cw8EjOss.png">
-	<link rel="sitemap" href="../sitemap-index.xml">
+	<link rel="sitemap" href="/sitemap-index.xml">
 	<link rel="alternate" type="application/rss+xml" title="Heclipse Salud">
 	<meta name="generator" content="Astro v5.7.13">
 	<title>Heclipse Salud</title>
@@ -21,21 +21,236 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"><!-- AOS -->
 	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"><!-- Bulma CSS -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"><!-- Smooth Scroll -->
-	<script type="module" src="../_astro/BaseHeader.astro_astro_type_script_index_0_lang.CKiZJWUb.js"></script>
+	<script type="module" src="../_astro/BaseHeader.astro_astro_type_script_index_0_lang.DpGak8gU.js"></script>
 	<!-- AOS Init -->
-	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-	<link rel="stylesheet" href="../_astro/modulos.CtwcO5Jq.css">
-	<link rel="stylesheet" href="../_astro/contact.BafMGh7w.css">
-	<link rel="stylesheet" href="../_astro/index.B3n8FHXm.css">
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script><!-- Swiper CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"><!-- Swiper JS -->
+	<script type="module" src="../_astro/BaseHeader.astro_astro_type_script_index_1_lang.CKiZJWUb.js"></script>
+	<link rel="stylesheet" href="../_astro/modulos.BemlB_jU.css">
+	<link rel="stylesheet" href="../_astro/contact.DMKd8mIc.css">
+	<style>
+		.cta-section[data-astro-cid-byetyhip] {
+			background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+			position: relative;
+			overflow: hidden
+		}
+
+		.two-column-layout[data-astro-cid-byetyhip] {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 4rem;
+			align-items: center;
+			padding: 4rem 2rem;
+			max-width: 1200px;
+			margin: 0 auto
+		}
+
+		.content-column[data-astro-cid-byetyhip] {
+			padding-right: 2rem
+		}
+
+		.form-column[data-astro-cid-byetyhip] {
+			display: flex;
+			justify-content: center;
+			position: relative;
+			z-index: 2;
+		}
+
+		.cta-section[data-astro-cid-byetyhip]:before {
+			content: "";
+			position: absolute;
+			inset: 0;
+			background-image: url(https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2070);
+			background-size: cover;
+			background-position: center;
+			opacity: .1;
+			z-index: 1
+		}
+
+		.cta-title[data-astro-cid-byetyhip] {
+			font-size: 3rem;
+			font-weight: 700;
+			color: #fff;
+			margin-bottom: 1.5rem;
+			line-height: 1.2;
+			text-align: left
+		}
+
+		.cta-subtitle[data-astro-cid-byetyhip] {
+			font-size: 1.25rem;
+			color: #ffffffe6;
+			margin: 0;
+			line-height: 1.5;
+			text-align: left
+		}
+
+		.contact-form-container[data-astro-cid-byetyhip] {
+			justify-content: center;
+			position: relative;
+			z-index: 2
+		}
+
+		.contact-form[data-astro-cid-byetyhip] {
+			background: #ffffff26;
+			backdrop-filter: blur(10px);
+			border-radius: var(--border-radius-lg);
+			padding: 2.5rem 2rem;
+			box-shadow: 0 8px 32px #0000001f;
+			width: 100%;
+			gap: 1.5rem;
+			border: 1px solid rgba(255, 255, 255, .18)
+		}
+
+		.form-row[data-astro-cid-byetyhip] {
+			display: flex;
+			gap: 1.5rem
+		}
+
+		.form-group[data-astro-cid-byetyhip] {
+			display: flex;
+			flex-direction: column;
+			gap: .4rem
+		}
+
+		.form-group[data-astro-cid-byetyhip] label[data-astro-cid-byetyhip] {
+			color: #fff;
+			font-size: 1rem;
+			font-weight: 500;
+			margin-bottom: .1rem
+		}
+
+		.form-group[data-astro-cid-byetyhip] input[data-astro-cid-byetyhip],
+		.form-group[data-astro-cid-byetyhip] textarea[data-astro-cid-byetyhip] {
+			border-radius: 8px;
+			border: none;
+			padding: .7rem 1rem;
+			font-size: 1rem;
+			background: #ffffffd9;
+			color: #222;
+			resize: none
+		}
+
+		.form-group[data-astro-cid-byetyhip] input[data-astro-cid-byetyhip]:focus,
+		.form-group[data-astro-cid-byetyhip] textarea[data-astro-cid-byetyhip]:focus {
+			outline: 2px solid var(--primary)
+		}
+
+		.form-submit[data-astro-cid-byetyhip] {
+			background: var(--secondary);
+			color: #fff;
+			border: none;
+			border-radius: 8px;
+			padding: .9rem 1.2rem;
+			font-size: 1.1rem;
+			font-weight: 600;
+			cursor: pointer;
+			transition: background .2s;
+			margin-top: 1rem;
+			width: 100%
+		}
+
+		.form-submit[data-astro-cid-byetyhip]:hover {
+			background: var(--primary-dark)
+		}
+
+		@media (max-width: 768px) {
+			.two-column-layout[data-astro-cid-byetyhip] {
+				grid-template-columns: 1fr;
+				gap: 2rem;
+				padding: 1.5rem 1rem
+			}
+
+			.content-column[data-astro-cid-byetyhip] {
+				padding-right: 0;
+				text-align: center;
+				order: 1
+			}
+
+			.form-column[data-astro-cid-byetyhip] {
+				order: 2
+			}
+
+			.cta-title[data-astro-cid-byetyhip] {
+				font-size: 2.2rem;
+				text-align: center;
+				margin-bottom: 1rem
+			}
+
+			.cta-subtitle[data-astro-cid-byetyhip] {
+				font-size: 1rem;
+				text-align: center;
+				line-height: 1.6
+			}
+
+			.contact-form[data-astro-cid-byetyhip] {
+				padding: 1.5rem 1rem;
+				max-width: 100%;
+				width: 100%;
+				border-radius: 16px
+			}
+
+			.form-row[data-astro-cid-byetyhip] {
+				flex-direction: column;
+				gap: 1rem
+			}
+
+			.form-group[data-astro-cid-byetyhip] {
+				gap: .5rem
+			}
+
+			.form-group[data-astro-cid-byetyhip] input[data-astro-cid-byetyhip],
+			.form-group[data-astro-cid-byetyhip] textarea[data-astro-cid-byetyhip] {
+				padding: .8rem 1rem;
+				font-size: .95rem
+			}
+
+			.form-submit[data-astro-cid-byetyhip] {
+				padding: .9rem 1.5rem;
+				font-size: 1rem
+			}
+		}
+
+		@media (max-width: 480px) {
+			.two-column-layout[data-astro-cid-byetyhip] {
+				padding: 1rem .5rem;
+				gap: 1.5rem
+			}
+
+			.cta-title[data-astro-cid-byetyhip] {
+				font-size: 1.8rem;
+				margin-bottom: .8rem
+			}
+
+			.cta-subtitle[data-astro-cid-byetyhip] {
+				font-size: .9rem
+			}
+
+			.contact-form[data-astro-cid-byetyhip] {
+				padding: 1.2rem .8rem;
+				border-radius: 12px
+			}
+
+			.form-group[data-astro-cid-byetyhip] input[data-astro-cid-byetyhip],
+			.form-group[data-astro-cid-byetyhip] textarea[data-astro-cid-byetyhip] {
+				padding: .7rem .8rem;
+				font-size: .9rem
+			}
+
+			.form-submit[data-astro-cid-byetyhip] {
+				padding: .8rem 1.2rem;
+				font-size: .95rem
+			}
+		}
+	</style>
 </head>
 
 <body class="has-background-white">
 	<div class="">
-		<nav class="navbar is-white py-4 sticky-navbar" role="navigation" aria-label="main navigation"
+		<nav class="navbar is-white pb-3 sticky-navbar" role="navigation" aria-label="main navigation"
 			data-astro-cid-3anf4eyd>
 			<div class="container" data-astro-cid-3anf4eyd>
-				<div class="navbar-brand" data-astro-cid-3anf4eyd> <a class="navbar-logo" href="#"
-						data-astro-cid-3anf4eyd> <img src="../_astro/SLOGAN%20HECLIPSE.BA5fkXIF_1vzyQI.webp" alt="Logo"
+				<div class="navbar-brand" data-astro-cid-3anf4eyd> <a class="navbar-logo" href="../index.html"
+						data-astro-cid-3anf4eyd> <img src="../_astro/logo_completo.Cr6EKNdp_Z1jhOVd.webp" alt="Logo"
 							data-astro-cid-3anf4eyd="true" width="120" height="150" loading="lazy" decoding="async"
 							class="main-logo animate__animated animate__fadeIn"> <img
 							src="../_astro/logo.Cw8EjOss_Z29UYy6.webp" alt="Logo" data-astro-cid-3anf4eyd="true"
@@ -47,7 +262,7 @@
 							data-astro-cid-3anf4eyd></span> </a> </div>
 				<div id="navbarBasic" class="navbar-menu animate__animated" data-astro-cid-3anf4eyd>
 					<div class="navbar-start" style="flex-grow: 1; justify-content: center;" data-astro-cid-3anf4eyd> <a
-							class="navbar-item menu-link has-text-weight-medium px-4" href="#" data-astro-cid-3anf4eyd>
+							class="navbar-item menu-link has-text-weight-medium px-4" href="../index.html" data-astro-cid-3anf4eyd>
 							Inicio </a><a class="navbar-item menu-link has-text-weight-medium px-4"
 							href="../porque-heclipse/index.html" data-astro-cid-3anf4eyd> ¿Por qué Heclipse? </a><a
 							class="navbar-item menu-link has-text-weight-medium px-4" href="../modulos/index.html"
@@ -70,7 +285,7 @@
 		</nav>
 		<script
 			type="module">document.addEventListener("DOMContentLoaded", () => { const t = document.querySelector(".navbar-burger"), e = document.querySelector(".navbar-menu"), i = document.querySelectorAll(".navbar-item, .button"); t?.addEventListener("click", () => { t.classList.toggle("is-active"), e?.classList.toggle("is-active"), e?.classList.contains("is-active") ? e.classList.add("animate__fadeIn") : e?.classList.remove("animate__fadeIn") }), i.forEach(s => { s.addEventListener("click", n => { const a = s.getAttribute("href"); if (a?.startsWith("#")) { n.preventDefault(); const c = document.querySelector(a); c && (t?.classList.remove("is-active"), e?.classList.remove("is-active"), e?.classList.remove("animate__fadeIn"), c.scrollIntoView({ behavior: "smooth", block: "start" })) } }) }) });</script>
-		<main>
+		<main data-astro-cid-4fqau3yi>
 			<section class="hero-modulos is-fullheight-with-navbar" data-astro-cid-k6ysdxl5>
 				<div class="hero-body" data-astro-cid-k6ysdxl5>
 					<div class="container" data-astro-cid-k6ysdxl5>
@@ -449,7 +664,7 @@
 						<div class="feature-box small-right" data-aos="fade-up" data-aos-delay="100"
 							data-astro-cid-b7ctqbbw> <i class="fas fa-user-circle" data-astro-cid-b7ctqbbw></i>
 							<h3 data-astro-cid-b7ctqbbw>Portal de pacientes</h3>
-							<p data-astro-cid-b7ctqbbw>y videoconferencias</p>	
+							<p data-astro-cid-b7ctqbbw>y videoconferencias</p>
 						</div>
 						<div class="feature-box third-left" data-aos="fade-up" data-aos-delay="200"
 							data-astro-cid-b7ctqbbw> <i class="fas fa-chart-line" data-astro-cid-b7ctqbbw></i>
@@ -460,7 +675,7 @@
 							data-astro-cid-b7ctqbbw> <i class="fas fa-video" data-astro-cid-b7ctqbbw></i>
 							<h3 data-astro-cid-b7ctqbbw>Módulo de telemedicina</h3>
 							<p data-astro-cid-b7ctqbbw>Consultas remotas integradas</p>
-						</div> <a href="/#contact" class="feature-box third-right custom-feature" data-aos="fade-up"
+						</div> <a href="#contact" class="feature-box third-right custom-feature" data-aos="fade-up"
 							data-aos-delay="300" data-astro-cid-b7ctqbbw> <i class="fas fa-cogs"
 								data-astro-cid-b7ctqbbw></i>
 							<h3 data-astro-cid-b7ctqbbw>¿Necesitás alguna funcionalidad específica?</h3>
@@ -470,74 +685,58 @@
 				</div>
 			</section>
 			<section class="section cta-section" id="contacto" data-aos="fade-up" data-astro-cid-byetyhip>
-				<div class="container" data-astro-cid-byetyhip> <!-- Encabezado CTA -->
-					<div class="cta-content" data-astro-cid-byetyhip>
-						<h2 class="cta-title" data-astro-cid-byetyhip>
-							¿Listo para transformar <br data-astro-cid-byetyhip> la gestión de tu empresa?
-						</h2>
-						<p class="cta-subtitle" data-astro-cid-byetyhip>
-							Contactanos hoy mismo y descubrí todo lo que podemos hacer por vos. <br
-								data-astro-cid-byetyhip>
-							Te acompañamos paso a paso para evaluar juntos el sistema.
-						</p>
-					</div> <!-- Contacto: Formulario y Cards -->
-					<div class="contact-flex" data-astro-cid-byetyhip> <!-- Formulario de contacto -->
-						<form class="contact-form" action="https://formsubmit.co/mcsilvestri19@gmail.com" method="POST"
-							target="_blank" data-astro-cid-byetyhip> <input type="hidden" name="_captcha" value="false"
-								data-astro-cid-byetyhip> <input type="hidden" name="_next"
-								value="https://heclipse.com.ar/gracias" data-astro-cid-byetyhip>
-							<!-- Honeypot anti-spam -->
-							<div style="display:none;" data-astro-cid-byetyhip> <label for="website"
-									data-astro-cid-byetyhip>No completar este campo</label> <input type="text"
-									id="website" name="website" tabindex="-1" autocomplete="off"
-									data-astro-cid-byetyhip> </div>
-							<div class="form-group" data-astro-cid-byetyhip> <label for="name"
-									data-astro-cid-byetyhip>Nombre</label> <input type="text" id="name" name="name"
-									required placeholder="Tu nombre" data-astro-cid-byetyhip> </div>
-							<div class="form-group" data-astro-cid-byetyhip> <label for="email"
-									data-astro-cid-byetyhip>Email</label> <input type="email" id="email" name="email"
-									required placeholder="tu@email.com" data-astro-cid-byetyhip> </div>
-							<div class="form-group" data-astro-cid-byetyhip> <label for="message"
-									data-astro-cid-byetyhip>Mensaje</label> <textarea id="message" name="message"
-									rows="4" required placeholder="¿En qué podemos ayudarte?"
-									data-astro-cid-byetyhip></textarea> </div> <button type="submit" class="form-submit"
-								data-astro-cid-byetyhip>Enviar mensaje</button>
-						</form> <!-- Cards de contacto -->
-						<div class="contact-info-section" data-astro-cid-byetyhip>
-							<div class="contact-grid" data-astro-cid-byetyhip> <a href="mailto:info@heclipse.com.ar"
-									target="_blank" class="contact-card " data-astro-cid-byetyhip>
-									<div class="contact-icon" data-astro-cid-byetyhip> <i class="fas fa-envelope"
-											data-astro-cid-byetyhip></i> </div>
-									<div class="contact-details" data-astro-cid-byetyhip>
-										<h4 class="contact-title" data-astro-cid-byetyhip>Email</h4>
-										<p class="contact-value" data-astro-cid-byetyhip>info@heclipse.com.ar</p>
+				<div class="container" data-astro-cid-byetyhip>
+					<div class="two-column-layout" data-astro-cid-byetyhip> <!-- Columna izquierda - Texto -->
+						<div class="content-column" data-astro-cid-byetyhip>
+							<h2 class="cta-title" data-astro-cid-byetyhip>
+								¿Listo para transformar <br data-astro-cid-byetyhip> la gestión de tu empresa?
+							</h2>
+							<p class="cta-subtitle" data-astro-cid-byetyhip>
+								Contactanos hoy mismo y descubrí todo lo que podemos hacer por vos. <br
+									data-astro-cid-byetyhip>
+								Te acompañamos paso a paso para evaluar juntos el sistema.
+							</p>
+						</div> <!-- Columna derecha - Formulario -->
+						<div class="form-column" data-astro-cid-byetyhip>
+							<form class="contact-form" action="https://formsubmit.co/mcsilvestri19@gmail.com"
+								method="POST" target="_blank" data-astro-cid-byetyhip> <input type="hidden"
+									name="_captcha" value="false" data-astro-cid-byetyhip> <input type="hidden"
+									name="_next" value="https://heclipse.com.ar/gracias" data-astro-cid-byetyhip>
+								<!-- Honeypot anti-spam -->
+								<div style="display:none;" data-astro-cid-byetyhip> <label for="website"
+										data-astro-cid-byetyhip>No completar este campo</label> <input type="text"
+										id="website" name="website" tabindex="-1" autocomplete="off"
+										data-astro-cid-byetyhip> </div>
+								<div class="form-row" data-astro-cid-byetyhip>
+									<div class="form-group" data-astro-cid-byetyhip> <label for="name"
+											data-astro-cid-byetyhip>Nombre</label> <input type="text" id="name"
+											name="name" required placeholder="Tu nombre" data-astro-cid-byetyhip> </div>
+									<div class="form-group" data-astro-cid-byetyhip> <label for="email"
+											data-astro-cid-byetyhip>Email</label> <input type="email" id="email"
+											name="email" required placeholder="tu@email.com" data-astro-cid-byetyhip>
 									</div>
-								</a><a href="https://wa.me/5493886828566" target="_blank"
-									class="contact-card contact-card-clickable" data-astro-cid-byetyhip>
-									<div class="contact-icon" data-astro-cid-byetyhip> <i class="fab fa-whatsapp"
-											data-astro-cid-byetyhip></i> </div>
-									<div class="contact-details" data-astro-cid-byetyhip>
-										<h4 class="contact-title" data-astro-cid-byetyhip>WhatsApp</h4>
-										<p class="contact-value" data-astro-cid-byetyhip>+54 9 3886 82-8566</p>
-									</div>
-								</a> </div>
+								</div>
+								<div class="form-group" data-astro-cid-byetyhip> <label for="message"
+										data-astro-cid-byetyhip>Mensaje</label> <textarea id="message" name="message"
+										rows="4" required placeholder="¿En qué podemos ayudarte?"
+										data-astro-cid-byetyhip></textarea> </div> <button type="submit"
+									class="form-submit" data-astro-cid-byetyhip>Enviar mensaje</button>
+							</form>
 						</div>
 					</div>
 				</div>
 			</section>
-		</main>
+		</main> <a href="https://wa.me/5493886828566" target="_blank" class="whatsapp-float"
+			aria-label="Contactar por WhatsApp" data-astro-cid-4fqau3yi> <i class="fab fa-whatsapp"
+				data-astro-cid-4fqau3yi></i> </a>
 	</div>
 	<footer class="footer has-background-white-ter" data-astro-cid-l7uoa7eo>
 		<div class="container" data-astro-cid-l7uoa7eo>
 			<div class="columns is-vcentered" data-astro-cid-l7uoa7eo>
 				<div class="column" data-astro-cid-l7uoa7eo>
-					<div class="content" data-astro-cid-l7uoa7eo> <img src="../_astro/logo_completo.Cr6EKNdp_ZVmNFO.webp"
-							alt="Logo" data-astro-cid-l7uoa7eo="true" width="160" height="40" loading="lazy"
-							decoding="async" class="mb-4">
-						<p class="has-text-grey" data-astro-cid-l7uoa7eo>
-							Soluciones tecnológicas para el sector salud, <br data-astro-cid-l7uoa7eo>
-							diseñadas para hacer tu trabajo más eficiente.
-						</p>
+					<div class="content" data-astro-cid-l7uoa7eo> <img
+							src="../_astro/SLOGAN%20HECLIPSE.BA5fkXIF_nL6u9.webp" alt="Logo"
+							data-astro-cid-l7uoa7eo="true" width="300" height="40" loading="lazy" decoding="async">
 					</div>
 				</div>
 				<div class="column has-text-centered" data-astro-cid-l7uoa7eo>
@@ -559,9 +758,9 @@
 						Mapa del sitio
 					</h4>
 					<ul class="site-map has-text-right" data-astro-cid-l7uoa7eo>
-						<li data-astro-cid-l7uoa7eo> <a href="#" class="has-text-grey" data-astro-cid-l7uoa7eo> Inicio
+						<li data-astro-cid-l7uoa7eo> <a href="../index.html" class="has-text-grey" data-astro-cid-l7uoa7eo> Inicio
 							</a> </li>
-							<li data-astro-cid-l7uoa7eo> <a href="../modulos/index.html" class="has-text-grey" data-astro-cid-l7uoa7eo>
+						<li data-astro-cid-l7uoa7eo> <a href="../modulos/index.html" class="has-text-grey" data-astro-cid-l7uoa7eo>
 								Módulos </a> </li>
 						<li data-astro-cid-l7uoa7eo> <a href="../porque-heclipse/index.html" class="has-text-grey"
 								data-astro-cid-l7uoa7eo> ¿Por qué Heclipse? </a> </li>

@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import logo from "../../assets/logo.png";
-import logoCompleto from "../../assets/SLOGAN HECLIPSE.png";
+import logoCompleto from "../../assets/logo_completo.png";
 
 const menuItems = [
 	{ href: "#", text: "Inicio" },
@@ -13,7 +13,7 @@ const menuItems = [
 ---
 
 <nav
-	class="navbar is-white py-4 sticky-navbar"
+	class="navbar is-white pb-3 sticky-navbar"
 	role="navigation"
 	aria-label="main navigation">
 	<div class="container">
@@ -76,8 +76,6 @@ const menuItems = [
 
 <style>
 	.sticky-navbar {
-		position: sticky;
-		top: 0;
 		z-index: 100;
 		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 		backdrop-filter: blur(10px);

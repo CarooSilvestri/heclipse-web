@@ -2,9 +2,8 @@
 import gestionImg from '../../assets/gestion-administrativa.png';
 ---
 
-<section class="hero is-fullheight-with-navbar">
-	<div class="hero-body">
-		<div class="container">
+<section class="hero">
+		<div class="hero-body">
 			<div class="columns is-vcentered">
 				<!-- Columna de texto -->
 				<div class="column is-6">
@@ -16,85 +15,59 @@ import gestionImg from '../../assets/gestion-administrativa.png';
 							Software de Gestión Inteligente para tu empresa de salud
 						</h2>
 						<p class="hero-description" data-aos="fade-up" data-aos-delay="300">
-							<strong>Gestión clínica y administrativa</strong> 100% adaptada a vos. Sin moldes. Sin límites. Gestioná <strong>Sanatorios, Clínicas, Hospitales, Centros de Diagnósticos, Laboratorios y Colegios Médicos</strong>, con una plataforma poderosa y moderna.
+							<strong>Gestión clínica y administrativa</strong> 100% adaptada a vos.<br>
+							 Sin moldes. Sin límites. Gestioná <strong>Sanatorios, Clínicas, Hospitales, Centros de Diagnósticos, Laboratorios y Colegios Médicos</strong>, con una plataforma poderosa y moderna.
 						</p>
-												<div class="hero-form">
-							<form class="email-form" data-aos="fade-up" data-aos-delay="400">
-								<div class="form-container">
-									<input 
-										type="email" 
-										class="email-input" 
-										placeholder="Ingresá tu email"
-										required
-									/>
-									<button type="submit" class="submit-button">
-										Prueba gratis
-									</button>
-								</div>
-							</form>
-						</div>
+						
+						<a href="/contact" class="submit-button" data-aos="fade-up" data-aos-delay="400">
+							<span class="button-text">Pedir una Demo</span>
+							<span class="icon">
+								<i class="bx bx-right-arrow-alt"></i>
+							</span>
+						</a>
 					</div>
 				</div>
 
 				<!-- Columna de imagen -->
-				<div class="column is-6">
+				<div class="column is-6" data-aos="fade-left" data-aos-delay="200">
 					<div class="hero-image-container">
-						<div class="hero-image-wrapper" data-aos="fade-left" data-aos-delay="200">
-							<img 
+						<img 
 								src={gestionImg.src} 
 								alt="Gestión administrativa con tecnología"
 								class="hero-image"
 							/>
 
-						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 </section>
 
 <style>
 	.hero {
 		background: #f8f9fa;
 		min-height: 90vh;
-		padding: 4.5rem 0;
-		display: flex;
-		align-items: center;
 	}
 
 	.hero-body {
 		display: flex;
 		align-items: center;
-		width: 100%;
-		padding: 0;
+		margin: auto;
 	}
 
 	.hero-content {
 		padding-right: 4rem;
-		max-width: 580px;
-	}
-
-	.hero-badge {
-		background: var(--primary);
-		color: white;
-		font-size: 0.75rem;
-		font-weight: 700;
-		letter-spacing: 1px;
-		padding: 0.5rem 1rem;
-		border-radius: 20px;
-		display: inline-block;
-		margin-bottom: 1.5rem;
+		gap: 1rem;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
 	}
 
 	.title {
 		color: #1a1a1a;
-		line-height: 1.15;
 		font-size: 2.8rem;
 		font-weight: 800;
-		margin-bottom: 2rem;
 		max-width: 100%;
-		letter-spacing: -0.02em;
 	}
 
 	.brand-name {
@@ -106,17 +79,13 @@ import gestionImg from '../../assets/gestion-administrativa.png';
 		color: var(--primary);
 		font-size: 1.4rem;
 		font-weight: 600;
-		line-height: 1.4;
-		margin-bottom: 2.5rem;
 		max-width: 100%;
 		font-family: var(--font-heading);
 	}
 
 	.hero-description {
 		color: #4a5568;
-		line-height: 1.7;
 		font-size: 1.15rem;
-		margin-bottom: 3rem;
 		max-width: 100%;
 	}
 
@@ -125,151 +94,45 @@ import gestionImg from '../../assets/gestion-administrativa.png';
 		font-weight: 600;
 	}
 
-	.hero-form {
-		margin-bottom: 3rem;
-	}
-
-	.email-form {
-		width: 100%;
-		max-width: 480px;
-	}
-
-	.form-container {
-		display: flex;
-		background: white;
-		border-radius: 50px;
-		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06), 0 2px 8px rgba(0, 0, 0, 0.04);
-		overflow: hidden;
-		border: 2px solid #f3f4f6;
-		transition: all 0.3s ease;
-		padding: 4px;
-		align-items: center;
-	}
-
-	.form-container:focus-within {
-		border-color: #4CAF50;
-		box-shadow: 0 8px 32px rgba(76, 175, 80, 0.12), 0 0 0 3px rgba(76, 175, 80, 0.08);
-		transform: translateY(-1px);
-	}
-
-	.email-input {
-		flex: 1;
-		padding: 1.1rem 1.25rem;
-		border: none;
-		outline: none;
-		font-size: 1rem;
-		color: #1f2937;
-		background: transparent;
-		font-family: var(--font-body);
-		font-weight: 400;
-	}
-
-	.email-input::placeholder {
-		color: #9ca3af;
-		font-weight: 400;
-	}
-
 	.submit-button {
 		background: #4CAF50;
 		color: white;
-		border: none;
-		padding: 1.1rem 1.5rem;
-		font-size: 0.95rem;
-		font-weight: 600;
+		padding: 1.1rem 2rem;
+		font-size: 1rem;
+		font-weight: bold;
 		cursor: pointer;
-		transition: all 0.3s ease;
 		font-family: var(--font-heading);
 		white-space: nowrap;
-		border-radius: 44px;
-		box-shadow: 0 4px 16px rgba(76, 175, 80, 0.3);
-		letter-spacing: 0.025em;
+		border-radius: 46px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.75rem;
+		width: 50%;
+		align-self: flex-end;
 	}
-
-	.submit-button:hover {
-		background: #45a049;
-		transform: translateY(-1px);
-		box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
-	}
-
-	.submit-button:active {
-		transform: translateY(0);
-		box-shadow: 0 3px 12px rgba(76, 175, 80, 0.4);
-	}
-
-	.hero-stats {
-		color: #4a5568;
-		font-size: 0.95rem;
-		line-height: 1.5;
-	}
-
-	.stats-link {
-		color: var(--primary);
-		text-decoration: none;
-		font-weight: 600;
-	}
-
-	.stats-link:hover {
-		text-decoration: underline;
+	
+	.icon {
+		font-size: 1.5rem;
 	}
 
 	/* Imagen */
 	.hero-image-container {
-		display: flex;
-		align-items: center;
-		justify-content: center;
 		height: 100%;
-		position: relative;
-	}
-
-	.hero-image-wrapper {
-		position: relative;
-		width: 100%;
-		max-width: 650px;
 	}
 
 	.hero-image {
+		height: 500px;
 		width: 100%;
-		height: 600px;
 		border-radius: 20px;
 		box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
-		transition: all 0.3s ease;
-	}
-
-	.hero-image:hover {
-		transform: translateY(-5px);
-		box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
-	}
-
-	.image-badge {
-		position: absolute;
-		bottom: 20px;
-		right: 20px;
-		background: rgba(255, 255, 255, 0.95);
-		color: #1a1a1a;
-		font-size: 0.75rem;
-		font-weight: 700;
-		letter-spacing: 1px;
-		padding: 0.5rem 1rem;
-		border-radius: 15px;
-		backdrop-filter: blur(10px);
-		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 	}
 
 	@media screen and (max-width: 768px) {
-		.hero {
-			padding: 2rem 0;
-			min-height: auto;
-		}
-
-		.columns {
-			flex-direction: column-reverse;
-		}
-
 		.hero-content {
-			padding-right: 0;
-			padding-top: 2rem;
 			text-align: center;
 			max-width: 100%;
+			align-items: center;
 		}
 
 		.title {
@@ -289,36 +152,8 @@ import gestionImg from '../../assets/gestion-administrativa.png';
 			text-align: center;
 		}
 
-		.email-form {
-			max-width: 100%;
-		}
-
-		.form-container {
-			flex-direction: row;
-			border-radius: 50px;
-			padding: 4px;
-			gap: 0;
-			max-width: 100%;
-		}
-
 		.submit-button {
-			margin-top: 0;
-			border-radius: 46px;
-			padding: 1rem 1.5rem;
-			font-size: 0.9rem;
-			white-space: nowrap;
-			min-width: auto;
-		}
-
-		.email-input {
-			padding: 1rem 1.25rem;
-			text-align: left;
-			font-size: 0.95rem;
-		}
-
-		.hero-image-wrapper {
-			max-width: 100%;
-			margin-bottom: 2rem;
+			width: 100%;
 		}
 
 		.hero-image {
@@ -330,10 +165,6 @@ import gestionImg from '../../assets/gestion-administrativa.png';
 	}
 
 	@media screen and (max-width: 480px) {
-		.hero {
-			padding: 1.5rem 0;
-		}
-
 		.title {
 			font-size: 1.8rem;
 			margin-bottom: 1.2rem;
@@ -352,18 +183,7 @@ import gestionImg from '../../assets/gestion-administrativa.png';
 		}
 
 		.hero-content {
-			padding-top: 1.5rem;
-			padding-left: 1rem;
-			padding-right: 1rem;
-		}
-
-		.form-container {
-			flex-direction: row;
-			border-radius: 50px;
-			padding: 4px;
-			gap: 0;
-			margin: 0 auto;
-			max-width: 100%;
+			padding: 0
 		}
 
 		.submit-button {
@@ -374,23 +194,17 @@ import gestionImg from '../../assets/gestion-administrativa.png';
 			white-space: nowrap;
 		}
 
-		.email-input {
-			padding: 0.9rem 1rem;
-			text-align: left;
-			font-size: 0.9rem;
-		}
-
 		.hero-image {
 			height: 280px;
 			border-radius: 12px;
 		}
-
-		.hero-image-wrapper {
-			margin-bottom: 1.5rem;
-		}
 	}
 
 	@media screen and (max-width: 360px) {
+		.hero-body {
+			flex-direction: column;
+		}
+
 		.title {
 			font-size: 1.6rem;
 			margin-bottom: 1rem;
@@ -411,20 +225,11 @@ import gestionImg from '../../assets/gestion-administrativa.png';
 			padding-right: 0.5rem;
 		}
 
-		.form-container {
-			margin: 0;
-		}
-
 		.submit-button {
 			padding: 0.8rem 1rem;
 			font-size: 0.8rem;
 		}
-
-		.email-input {
-			padding: 0.8rem 0.9rem;
-			font-size: 0.85rem;
-		}
-
+		
 		.hero-image {
 			height: 250px;
 		}

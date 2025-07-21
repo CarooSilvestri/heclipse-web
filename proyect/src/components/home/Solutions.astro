@@ -35,6 +35,7 @@ const solutionAreas = [
 		<div class="columns is-variable is-6">
 			{solutionAreas.map((area, index) => (
 				<div class="column is-4" data-aos="fade-up" data-aos-delay={index * 100}>
+					<a href="/modulos">
 					<div class="solution-card">
 						<div class="solution-icon">
 							<i class={area.icon}></i>
@@ -46,12 +47,12 @@ const solutionAreas = [
 								<span class="module-tag">{module}</span>
 							))}
 						</div>
-					</div>
+					</div></a>
 				</div>
 			))}
 		</div>
 
-		<div class="has-text-centered mt-6">
+		<div class="has-text-centered mt-2">
 			<a href="/modulos" class="cta-button-blue">
 				<span>Ver todas nuestras soluciones</span>
 				<span class="icon">
@@ -75,11 +76,6 @@ const solutionAreas = [
 		transition: var(--transition-base);
 	}
 
-	.solution-card:hover {
-		transform: translateY(-8px);
-		box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
-	}
-
 	.solution-icon {
 		width: 80px;
 		height: 80px;
@@ -95,7 +91,7 @@ const solutionAreas = [
 		border: 2px solid #e9ecef;
 	}
 
-	.solution-card:hover .solution-icon {
+	a:hover .solution-icon {
 		background: var(--secondary);
 		color: white;
 		transform: scale(1.1);
@@ -134,7 +130,7 @@ const solutionAreas = [
 		transition: var(--transition-base);
 	}
 
-	.solution-card:hover .module-tag {
+	a:hover .module-tag {
 		background: var(--primary);
 		color: white;
 	}
@@ -164,20 +160,9 @@ const solutionAreas = [
 		text-decoration: none;
 	}
 
-	.cta-button-blue .icon {
-		transition: transform 0.3s ease;
-	}
-
-	.cta-button-blue:hover .icon {
-		transform: translateX(3px);
-	}
 
 	/* ===== RESPONSIVE ===== */
 	@media (max-width: 768px) {
-		.columns {
-			flex-direction: column;
-		}
-
 		.solution-icon {
 			width: 60px;
 			height: 60px;
@@ -199,10 +184,14 @@ const solutionAreas = [
 	}
 
 	@media (max-width: 480px) {
-		.columns {
-			gap: 0.5rem !important;
+
+		.title {
+			font-size: 2rem;
 		}
 
+		.subtitle {
+			font-size: 1rem;
+		}
 		.solution-card {
 			padding: 1.5rem 1rem;
 			margin-bottom: 0;
@@ -220,6 +209,9 @@ const solutionAreas = [
 
 		.solution-description {
 			font-size: 0.85rem;
+		}
+		.cta-button-blue {
+			font-size: 0.9rem;
 		}
 	}
 </style> 

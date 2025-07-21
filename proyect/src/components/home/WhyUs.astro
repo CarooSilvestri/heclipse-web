@@ -66,8 +66,10 @@ const sectionContent = {
 								<div class="feature-icon">
 									<i class={feature.icon}></i>
 								</div>
-								<h3 class="feature-title">{feature.title}</h3>
-								<p class="feature-description">{feature.description}</p>
+								<div>
+									<h3 class="feature-title">{feature.title}</h3>
+									<p class="feature-description">{feature.description}</p>
+								</div>
 							</div>
 						</article>
 					))}
@@ -261,8 +263,12 @@ const sectionContent = {
 		}
 
 		.feature-content {
-			align-items: center;
-		}
+		display: flex;
+		flex-direction: row;
+		text-align: left;
+		gap: 1rem;
+		height: 100%;
+	}
 
 		.feature-icon {
 			align-self: center;
